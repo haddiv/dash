@@ -97,6 +97,8 @@ angular
         templateUrl:'views/form.html',
         url:'/form'
     })
+
+
       .state('dashboard.blank',{
         templateUrl:'views/pages/blank.html',
         url:'/blank'
@@ -125,6 +127,10 @@ angular
           }
         }
     })
+        .state('dashboard.employee',{
+            templateUrl:'views/employee.html',
+            url:'/employee'
+        })
       .state('dashboard.table',{
         templateUrl:'views/table.html',
         url:'/table'
