@@ -101,6 +101,10 @@ angular
             templateUrl:'views/employees.html',
             url:'/employees'
         })
+        .state('dashboard.employeesForm',{
+            templateUrl:'views/employeesForm.html',
+            url:'/employeesForm'
+        })
       .state('dashboard.blank',{
         templateUrl:'views/pages/blank.html',
         url:'/blank'
