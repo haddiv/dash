@@ -5,7 +5,7 @@
     <!-- /.col-lg-12 -->
 	
 </div>
-<div class = "row">
+<div class = "row" ng-controller = "employeeController">
 		<div class="col-lg-12">
             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add New Employee</button>
 
@@ -17,30 +17,46 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Information List</h4>
+                            <h1 class="modal-title">Information List</h1>
                         </div>
-                        < class="modal-body">
-
                             <form>
-                                <h1>Personal Information</h1>
+							<div class = "row col-md-12">
+                                <h3>Personal Information</h3>
                                 <div class="form-group col-md-6" >
                                     <label for="name">Name:</label>
-                                    <input type="text" class="form-control" id="name">
+                                    <input type="text" class="form-control" id="name" ng-model="name">
+									
                                 </div>
                                 <div class="form-group  col-md-6">
                                     <label for="surname">Last Name</label>
                                     <input type="text" class="form-control" id="surname">
                                 </div>
+								
+								<div class="form-group  col-md-6">
+								<label>Gender:</label>
+									<label class="radio-inline" for = "male">Male</label>
+									<input type="radio" name="optradio" id = "male">
+									<label class="radio-inline" for = "female">Female</label>
+									<input type="radio" name="optradio" id = "female">
+								</div>
+								
+								<div class="form-group col-md-6">
+                                        <label for="birthDate" class="col-2 col-form-label">Date of Birth</label>
+                                        <input class="form-control" type="date" value="2011-08-19" id="birthDate">
+                                  </div>
+								
                                 <div class="form-group  col-md-6">
                                     <label for="telNum">Telephone Number</label>
-                                    <input type="password" class="form-control" id="telNum">
+                                    <input type="text" class="form-control" id="telNum" ng-pattern="/^\d+$/">
                                 </div>
+								
                                 <div class="form-group  col-md-6">
                                     <label for="email">Email</label>
                                     <input type="password" class="form-control" id="email">
                                 </div>
+								
                                 <div class="form-group  col-md-6">
-                                    <label class="mr-sm-2" for="region">Region</label>
+                                    <label class="mr-sm-2" for="region">Region</label><br/>
                                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="region">
                                         <option selected>Choose...</option>
                                         <option value="1">Shirak</option>
@@ -50,7 +66,7 @@
                                 </div>
 
                                 <div class="form-group  col-md-6">
-                                    <label class="mr-sm-2" for="city">City</label>
+                                    <label class="mr-sm-2" for="city">City</label><br/>
                                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="city">
                                         <option selected>Choose...</option>
                                         <option value="1">Shirak</option>
@@ -61,38 +77,123 @@
 
 
 
-                                <div class="form-group col-md-6">
-                                        <label for="birthDate" class="col-2 col-form-label">Date of Birth</label>
-                                        <input class="form-control" type="date" value="2011-08-19" id="birthDate">
-                                  </div>
-
-                                <div class="form-group">
-                                <label class="custom-file">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
-                                    <input type="file" id="file2" class="custom-file-input">
-                                    <span class="custom-file-control"></span>
-                                </label>
+                                <div class="form-group  col-md-12">
+                                    <label for="adress">Full Adress</label>
+                                    <input type="password" class="form-control" id="adress">
                                 </div>
+								
+                                </div>
+								
+								 <div class = "row col-md-12"> 
+								 <h3>Professional Information</h3> 
+								 
+								<div class="form-group  col-md-6">
+                                    <label for="position">Position</label>
+                                    <input type="password" class="form-control" id="position">
+                                </div>
+								
+								<div class="form-group col-md-6">
+                                        <label for="startWork" class="col-2 col-form-label">Start work</label><br/>
+                                        <input class="form-control" type="date" value="2011-08-19" id="startWork">
+                                  </div>
+								
+								<div class="form-group  col-md-6">
+                                    <label for="wage">Wage rate</label>
+                                    <input type="text" class="form-control" id="wage">
+                                </div>
+								
+								<div class="form-group  col-md-6">
+                                    <label class="mr-sm-2" for="department">Department</label><br/>
+                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="department">
+                                        <option selected>Choose...</option>
+                                        <option value="1">Foreign Affairs</option>
+                                        <option value="2">PR</option>
+                                        <option value="3">HR</option>
+                                        <option value="3">Marketing</option>
+                                    </select>
+                                </div>
+							   
+							   <div class="form-group col-md-12">
+									<label for="characteristics">Characteristics:</label>
+									<textarea class="form-control" rows="5" id="characteristics"></textarea>
+							  </div>
+							  
+							  </div>
+							 
+							   
+							  <div class = "row col-md-12"> 
+							 <h3 class="col-md-12">Education</h3>
+							<div class = "educationSection">
+							<div class="form-group  col-md-6">
+										<label for="universaty">Universaty/Colage</label>
+										<input type="text" class="form-control" id="universaty">
+							 </div>
+							
+							
+							<div class="form-group  col-md-6">
+										<label for="specialization">Specialization</label>
+										<input type="text" class="form-control" id="specialization">
+							 </div>
+							
+							<div class="form-group col-md-6">
+								  <label for="admissionYear" class="col-2 col-form-label">From</label>
+								   <input class="form-control" type="date" value="2011-08-19" id="admissionYear">
+							</div>
+							
+							<div class="form-group col-md-6">
+								  <label for="graduatedYear" class="col-2 col-form-label">To
+								  </label>
+								   <input class="form-control" type="date" value="2011-08-19" id="graduatedYear">
+							  						
+						</div>
+						</div>
+						<button type="button" class="btn btn-primary" style = "float:right">+</button>
+						
+						</div>
+							
+						
+							<div class ="row col-md-12">
+							<h3 class="col-md-12">Work experience</h3>
+							<div class = "workSection">
+							<div class="form-group  col-md-6">
+										<label for="organization">Organization</label>
+										<input type="text" class="form-control" id="organization">
+							 </div>
+							<div class="form-group  col-md-6">
+										<label for="position">Position</label>
+										<input type="text" class="form-control" id="position">
+							 </div>
+							
+							<div class="form-group col-md-6">
+								  <label for="startedYear" class="col-2 col-form-label">From</label>
+								   <input class="form-control" type="date" value="2011-08-19" id="startedYear">
+							</div>
+							
+							<div class="form-group col-md-6">
+								  <label for="quitYear" class="col-2 col-form-label">To
+								  </label>
+								   <input class="form-control" type="date" value="2011-08-19" id="quitYear">
+							  						
+						</div>
+						</div>
+						<button type="button" class="btn btn-primary" style = "float:right">+</button>
+						
 
-
-                                    <input type="file" name="img[]" class="file">
-                                                                       
-
-             <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
-      </span>
-
-
-
-                            </form>
-
-
-
-                        </div>
-                        <div class="modal-footer">
+						</div>
+						
+						
+						<div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Reset</button>
                         </div>
+						
+                       </form>
+
+
+
+                        
+                        
                     </div>
 
                 </div>
