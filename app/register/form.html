@@ -40,26 +40,31 @@
                    ng-maxlength="30" required>
             <span class="icon7"><i class="fa fa-street-view" aria-hidden="true"></i></span>
             <br>
+
+            <input placeholder="Address" name="f_name" type="text" ng-model="f_name" ng-minlength="3"
+                   ng-maxlength="35" required>
+            <span class="icon8"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+            <br>
+
+            <input placeholder="ID" name="id" type="text" ng-model="id" ng-minlength="3"
+                   ng-maxlength="35" required>
+            <span class="icon9"><i class="fa fa-id-card" aria-hidden="true"></i></span>
+            <br>
+            <br>
+            <lebal>Personal characteristics
+                <textarea ng-minlength="5" ng-maxlength="100" style="height: 115px;width: 300px"></textarea>
+                <span class="icon10"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+            </lebal>
+            <br><br>
             <lebal>Birthday
                 <input type="date" placeholder="Birthday" name="bday">
             </lebal>
-            <span class="icon8"><i class="fa fa-birthday-cake" aria-hidden="true"></i></span>
-            <br>
-            <input placeholder="Address" name="f_name" type="text" ng-model="f_name" ng-minlength="3"
-                   ng-maxlength="35" required>
-            <span class="icon9"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-            <br>
-            <input placeholder="ID" name="id" type="ID" ng-model="id" ng-minlength="3"
-                   ng-maxlength="35" required>
-            <span class="icon10"><i class="fa fa-id-card" aria-hidden="true"></i></span>
-            <br><br>
-            <lebal>Personal characteristics
-                <textarea ng-minlength="5" ng-maxlength="100" style="height: 115px;width: 300px"></textarea>
-                <span class="icon11"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-            </lebal>
-            <br><br>
+            <span class="icon11"><i class="fa fa-birthday-cake" aria-hidden="true"></i></span>
+            <br> <br>
+            <lebal>Salary
             <input placeholder="Salary" name="Salary" type="number" ng-model="Salary" ng-minlength="2"
                    ng-maxlength="8" required>
+            </lebal>
             <span class="icon12"><i class="fa fa-usd" aria-hidden="true"></i></span>
             <br><br>
             <lebal>Gender<br>
