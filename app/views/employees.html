@@ -29,20 +29,20 @@
                                 </div>
                                 <div class="form-group  col-md-6">
                                     <label for="surname">Last Name</label>
-                                    <input type="text" class="form-control" id="surname">
+                                    <input type="text" class="form-control" id="surname" ng-model="surname">
                                 </div>
 								
 								<div class="form-group  col-md-6">
 								<label>Gender:</label>
-									<label class="radio-inline" for = "male">Male</label>
+									<label class="radio-inline" for = "male" ng-model="gender">Male</label>
 									<input type="radio" name="optradio" id = "male">
-									<label class="radio-inline" for = "female">Female</label>
-									<input type="radio" name="optradio" id = "female">
+									<label class="radio-inline" for = "female" >Female</label>
+									<input type="radio" name="optradio" id = "female" ng-model="gender">
 								</div>
 								
 								<div class="form-group col-md-6">
                                         <label for="birthDate" class="col-2 col-form-label">Date of Birth</label>
-                                        <input class="form-control" type="date" value="2011-08-19" id="birthDate">
+                                        <input class="form-control" type="date" value="2011-08-19" id="birthDate" ng-model="dateOfBirth">
                                   </div>
 								
                                 <div class="form-group  col-md-6">
@@ -183,7 +183,7 @@
 						
 						
 						<div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="save()">Save</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Reset</button>
                         </div>

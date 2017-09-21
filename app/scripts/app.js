@@ -154,10 +154,24 @@ angular
        url:'/grid'
    })
    
-	.state('dashboard.employees',{
+   
+   .state('dashboard.employees',{
        templateUrl:'views/employees.html',
-       url:'/employees'
-   })
+       url:'/employees',
+        controller:'employeeController',
+        resolve: {
+          loadMyFile:function($ocLazyLoad) {
+            
+            $ocLazyLoad.load({
+                name:'sbAdminApp',
+                files:['scripts/controllers/employee.js']
+            })
+          }
+        }
+    })
+   
+   
+
   }]);
 
     
