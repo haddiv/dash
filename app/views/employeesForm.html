@@ -28,32 +28,30 @@
                     </div>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
                             <p> Birthday </p>
-                            <div class="form-control width">
-                                <select>
-                                    <option ng-repeat="day in days">{{ day }}</option>
-                                </select>
-                                <select>
-                                    <option ng-repeat="month in  months">{{ month }}</option>
-                                </select>
-                                <select  ng-controller="selectAge">
-                                    <option ng-repeat="year in  years">{{ year }}</option>
-                                </select>
-                            </div>
+                        <select class="form-control selectBoxDayStyle">
+                            <option  class="form-control"ng-repeat="day in days">{{ day }}</option>
+                        </select>
+                        <select class="form-control selectBoxStyle">
+                            <option ng-repeat="month in  months">{{ month }}</option>
+                        </select>
+                        <select class="form-control selectBoxStyle" ng-controller="selectAge">
+                            <option ng-repeat="year in  years">{{ year }}</option>
+                        </select>
                     </div>
 
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                            <p> When did started to work </p>
-                            <div class="form-control width">
-                                <select>
-                                    <option ng-repeat="day in days">{{ day }}</option>
+                            <p> When have started to work </p>
+
+                                <select class="form-control selectBoxDayStyle">
+                                    <option  class="form-control"ng-repeat="day in days">{{ day }}</option>
                                 </select>
-                                <select>
+                                <select class="form-control selectBoxStyle">
                                     <option ng-repeat="month in  months">{{ month }}</option>
                                 </select>
-                                <select  ng-controller="selectAge">
+                                <select class="form-control selectBoxStyle" ng-controller="selectAge">
                                     <option ng-repeat="year in  years">{{ year }}</option>
                                 </select>
-                            </div>
+
 
                     </div>
                 </div>
@@ -82,37 +80,59 @@
             </div>
             <div class="row margin">
                 <fieldset>
-                    <legend>Education and Skills :</legend>
+                    <legend>Education, experience and skills :</legend>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
                         <p> Name </p>
                         <textarea class="form-control"> </textarea>
                     </div>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
                         <p> Speciality: </p>
-                        <textarea class="form-control"> </textarea>
+                        <textarea class="form-control "> </textarea>
                     </div>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p> Skills: </p>
-                        <textarea class="form-control"> </textarea>
+                            <p>Have studied from -- to: </p>
+
+                            <select class="form-control selectBoxStyle marginRight" ng-controller="selectAge">
+                                <option ng-repeat="year in  years">{{ year }}</option>
+                            </select>
+                            <select  class="form-control selectBoxStyle">
+                                <option ng-repeat="year in  years">{{ year }}</option>
+                            </select>
+                    </div>
+                    <div class="submitButtonClass">
+                        <input type="submit" value="add" class="btn btn-primary">
                     </div>
                     </fieldset>
             </div>
             <div class="row margin">
-                    <div class="form-control">
-                        <div class="floatLeftDiv">
-                        From:
-                        <select  ng-controller="selectAge">
+
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                        <p> Organization </p>
+                        <textarea class="form-control"> </textarea>
+                    </div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                        <p> Speciality: </p>
+                        <textarea class="form-control "> </textarea>
+                    </div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                        <p>Have worked from -- to: </p>
+
+                        <select class="form-control selectBoxStyle marginRight" ng-controller="selectAge">
                             <option ng-repeat="year in  years">{{ year }}</option>
                         </select>
-                        </div>
-                        <div class="floatLeftDiv">
-                        To:
-                        <select  ng-controller="selectAge">
+                        <select  class="form-control selectBoxStyle">
                             <option ng-repeat="year in  years">{{ year }}</option>
                         </select>
-                        </div>
+                    </div>
+                    <div class="submitButtonClass">
+                        <input type="submit" value="add" class="btn btn-primary">
                     </div>
 
+            </div>
+            <div class="row">
+
+                <p> Skills: </p>
+                <textarea class="form-control"> </textarea>
             </div>
             <div class="row margin">
                 <fieldset>

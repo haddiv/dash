@@ -5,6 +5,9 @@
 .margin{
     margin-top: 25px;
 }
+.marginRight{
+    margin-right: 5px;
+}
 .width{
     width: 347px;
 }
@@ -26,4 +29,13 @@
 .submitButtonClass{
     margin-top: 15px;
     float: right;
+}
+.selectBoxStyle{
+    width: 126px;
+    float: left;
+}
+.selectBoxDayStyle{
+    width: 87px;
+    padding: 6px;
+    float: left;
 }
