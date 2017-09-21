@@ -6,38 +6,126 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/employeesTableStyle.css">
 </head>
-    <body>
-        <form>
+    <body ng-app="sbAdminApp">
+    <div class="container">
+        <form class="margin">
             <fieldset>
                 <legend>Main Information </legend>
-                <div class="row">
+                <div class="row margin">
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="name" class="form-control" placeholder="name"> </div>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="lastName" class="form-control" placeholder="Last name"></div>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="name" class="form-control" placeholder="patronymic"></div>
                 </div>
-                <div class="row">
+                <div class="row margin">
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <label><input type="radio" name="gender" value="male"> Male </label>
-                        <label><input type="radio" name="gender" value="female"> female</label>
-                        <label><input type="radio" name="gender" value="other"> other</label>
+                        <p> Gender </p>
+                            <label><input type="radio" name="gender" value="male"> Male </label>
+                            <label><input type="radio" name="gender" value="female"> female</label>
+                            <label><input type="radio" name="gender" value="other"> other</label>
+
                     </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="department" class="form-control" placeholder="department"></div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="position" class="form-control" placeholder="position"></div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                            <p> Birthday </p>
+                            <div class="form-control width">
+                                <select>
+                                    <option ng-repeat="day in days">{{ day }}</option>
+                                </select>
+                                <select>
+                                    <option ng-repeat="month in  months">{{ month }}</option>
+                                </select>
+                                <select  ng-controller="selectAge">
+                                    <option ng-repeat="year in  years">{{ year }}</option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                            <p> When did started to work </p>
+                            <div class="form-control width">
+                                <select>
+                                    <option ng-repeat="day in days">{{ day }}</option>
+                                </select>
+                                <select>
+                                    <option ng-repeat="month in  months">{{ month }}</option>
+                                </select>
+                                <select  ng-controller="selectAge">
+                                    <option ng-repeat="year in  years">{{ year }}</option>
+                                </select>
+                            </div>
+
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="col-sm-1 col-xs-6 col-lg-6 col-md-6"><input type="text" name="department" class="form-control" placeholder="department"></div>
+                    <div class="col-sm-1 col-xs-6 col-lg-6 col-md-6"><input type="text" name="position" class="form-control" placeholder="position"></div>
+                </div>
+                <div class="row margin">
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                        <p> Salary </p>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                        <div class="uploadPhotoDiv">
+                        </div>
+                    </div>
                 </div>
             </fieldset>
-            <fieldset>
-                <legend> Communication </legend>
-                <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="phoneNumber" class="form-control" placeholder="Phone number"> </div>
-                <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="email" class="form-control" placeholder="e-mail"></div>
-                <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="address" class="form-control" placeholder="Address"></div>
-            </fieldset>
-            <fieldset>
-                <legend> Additional information</legend>
-                <textarea class="form-control" placeholder="characteristic"> </textarea>
-            </fieldset>
+            <div class="row margin">
+                <fieldset>
+                    <legend> Communication </legend>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="phoneNumber" class="form-control" placeholder="Phone number"> </div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="email" class="form-control" placeholder="e-mail"></div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="address" class="form-control" placeholder="Address"></div>
+                </fieldset>
+            </div>
+            <div class="row margin">
+                <fieldset>
+                    <legend>Education and Skills :</legend>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                        <p> Name </p>
+                        <textarea class="form-control"> </textarea>
+                    </div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                        <p> Speciality: </p>
+                        <textarea class="form-control"> </textarea>
+                    </div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                        <p> Skills: </p>
+                        <textarea class="form-control"> </textarea>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row margin">
+                    <div class="form-control">
+                        <div class="floatLeftDiv">
+                        From:
+                        <select  ng-controller="selectAge">
+                            <option ng-repeat="year in  years">{{ year }}</option>
+                        </select>
+                        </div>
+                        <div class="floatLeftDiv">
+                        To:
+                        <select  ng-controller="selectAge">
+                            <option ng-repeat="year in  years">{{ year }}</option>
+                        </select>
+                        </div>
+                    </div>
 
+            </div>
+            <div class="row margin">
+                <fieldset>
+                    <legend> Additional information</legend>
+                    <p> Characteristic </p>
+                    <textarea class="form-control"> </textarea>
+                </fieldset>
+            </div>
+            <div class="submitButtonClass">
+                <input type="submit" value="Create" class="btn btn-primary">
+            </div>
         </form>
-
+    </div>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     </body>
 </html>

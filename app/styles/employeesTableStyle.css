@@ -2,3 +2,28 @@
     float: right;
     margin: 25px 0;
 }
+.margin{
+    margin-top: 25px;
+}
+.width{
+    width: 347px;
+}
+
+.floatLeftDiv{
+    float: left;
+    padding-left: 15px;
+}
+.uploadPhotoDiv{
+    margin-left: 25px;
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+    background-color: #cccccc;
+    background-image: url('../img/slr-camera-xxl.png');
+    background-repeat: no-repeat;
+    background-position: 20px;
+}
+.submitButtonClass{
+    margin-top: 15px;
+    float: right;
+}
