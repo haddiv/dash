@@ -7,7 +7,7 @@
  * Controller of the sbAdminApp
  */
 angular.module('sbAdminApp')
-  .controller('employeeController', function($scope) {
+  .controller('employeeController', function($scope, $http) {
   
           $scope.save = function(){
 		 			$scope.obj = [{
@@ -22,6 +22,20 @@ angular.module('sbAdminApp')
 			 $scope.intoJs = angular.toJson($scope.obj);
 		 console.log($scope.intoJs);
 			}
+			
+			$scope.fromJsonObj=[];
+			
+			$http({
+        method : "GET",
+        url : "data/employees.json"
+    }).then(function mySuccess(response) {
+        $scope.dataFromJson = response.data;
+		$scope.fromJsonObj.push(angular.fromJson($scope.dataFromJson));
+    }, function myError(response) {
+        $scope.dataFromJson = response.statusText;
+    });
+			
 		
 		 
 });
+
