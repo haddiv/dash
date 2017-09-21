@@ -153,6 +153,11 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
+   
+	.state('dashboard.employees',{
+       templateUrl:'views/employees.html',
+       url:'/employees'
+   })
   }]);
 
     
