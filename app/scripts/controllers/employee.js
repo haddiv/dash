@@ -23,14 +23,15 @@ angular.module('sbAdminApp')
 		 console.log($scope.intoJs);
 			}
 			
-			$scope.fromJsonObj=[];
+			$scope.fromJsonObj;
 			
 			$http({
         method : "GET",
         url : "data/employees.json"
     }).then(function mySuccess(response) {
         $scope.dataFromJson = response.data;
-		$scope.fromJsonObj.push(angular.fromJson($scope.dataFromJson));
+		$scope.fromJsonObj=angular.fromJson($scope.dataFromJson);
+		console.log($scope.fromJsonObj);
     }, function myError(response) {
         $scope.dataFromJson = response.statusText;
     });
