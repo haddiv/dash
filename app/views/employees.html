@@ -221,9 +221,9 @@
                             </tr>
                         </thead>
                         <tbody >
-						   <tr ng-repeat="x in fromJsonObj" >
+						   <tr ng-repeat="x in fromJsonObj" ng-init="current=1" >
 						    <td><input type="checkbox"></td>
-						   <td>1</td>
+						   <td>{{current + $index}}</td>
 						   <td ng-bind="x.image"></td>
 						   <td ng-bind="x.name"></td>
 						   <td ng-bind="x.surname"></td>
