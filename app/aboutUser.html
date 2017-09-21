@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registration </title>
+    <title>form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/timeline.css">
 </head>
-<body ng-app="">
-<div class="form-view">
-    <h2 class="sub-head">Registration </h2>
+<body ng-app="sbAdminApp" ng controller="ExampleController">
+<div class="form-view" >
+    <h2 class="sub-head">Information</h2>
     <div class="sub-main">
         <form name="myForm">
-            <input placeholder="First Name" name="f_name" type="text" ng-model="f_name" ng-minlength="3"
-                   ng-maxlength="15" required title="Please enter 3 characters or more.">
+            <input placeholder="First Name" name="f_name" type="text" ng-model="user.first" ng-minlength="3"
+                   ng-maxlength="15" required>
             <span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
             <br>
-            <input placeholder="Last Name" name="l_name" type="text" ng-model="l_name" ng-minlength="3"
-                   ng-maxlength="20" required title="Please enter 3 characters or more.">
+            <input placeholder="Last Name" name="l_name" type="text" ng-model="user.last" ng-minlength="3"
+                   ng-maxlength="20" required>
             <span class="icon2"><i class="fa fa-user" aria-hidden="true"></i></span>
             <br>
-            <input placeholder="Father Name" name="father_name" type="text" ng-model="father_name" ng-minlength="3"
+            <input placeholder="Father Name" name="father_name" type="text" ng-model="user.father" ng-minlength="3"
                    ng-maxlength="15" required>
             <span class="icon3"><i class="fa fa-user" aria-hidden="true"></i></span>
             <br>
-            <input placeholder="Phone Number" name="tel" type="tel" ng-model="tel" ng-minlength="9"
+            <input placeholder="Phone Number" name="tel" type="tel" ng-model="user.phone" ng-minlength="9"
                    ng-maxlength="9" required>
             <span class="icon4"><i class="fa fa-phone" aria-hidden="true"></i></span>
             <br>
-            <input placeholder="Email" name="email" type="email" title="Please enter a valid email" ng-model="email"
+            <input placeholder="Email" name="email" type="email" ng-model="user.email"
                    required>
             <span class="icon5"><i class="fa fa-envelope" aria-hidden="true"></i></span>
             <span ng-show="myForm.email.$error.email" class="not_email"></span>
             <br>
-            <input placeholder="Position" name="pos" type="text" ng-model="pos" ng-minlength="3"
+            <input placeholder="Position" name="pos" type="text" ng-model="user.position" ng-minlength="3"
                    ng-maxlength="15" required>
             <span class="icon6"><i class="fa fa-user" aria-hidden="true"></i></span>
             <br>
-            <input placeholder="Skills" name="pos" type="text" ng-model="pos" ng-minlength="3"
+            <input placeholder="Skills" name="pos" type="text" ng-model="user.skills" ng-minlength="3"
                    ng-maxlength="30" required>
             <span class="icon7"><i class="fa fa-street-view" aria-hidden="true"></i></span>
             <br>
 
-            <input placeholder="Address" name="f_name" type="text" ng-model="f_name" ng-minlength="3"
+            <input placeholder="Address" name="f_name" type="text" ng-model="user.address" ng-minlength="3"
                    ng-maxlength="35" required>
             <span class="icon8"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
             <br>
 
-            <input placeholder="ID" name="id" type="text" ng-model="id" ng-minlength="3"
+            <input placeholder="ID" name="id" type="text" ng-model="user.Id" ng-minlength="3"
                    ng-maxlength="35" required>
             <span class="icon9"><i class="fa fa-id-card" aria-hidden="true"></i></span>
             <br>
             <br>
             <lebal>Personal characteristics
-                <textarea ng-minlength="5" ng-maxlength="100" style="height: 115px;width: 300px"></textarea>
+                <textarea ng-minlength="5" ng-maxlength="100" ng-model="user.Personal_characteristics"
+                          style="height: 115px;width: 300px"></textarea>
                 <span class="icon10"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
             </lebal>
             <br><br>
@@ -62,8 +63,8 @@
             <span class="icon11"><i class="fa fa-birthday-cake" aria-hidden="true"></i></span>
             <br> <br>
             <lebal>Salary
-            <input placeholder="Salary" name="Salary" type="number" ng-model="Salary" ng-minlength="2"
-                   ng-maxlength="8" required>
+                <input placeholder="Salary" name="Salary" type="number" ng-model="user.salary" ng-minlength="2"
+                       ng-maxlength="8" required>
             </lebal>
             <span class="icon12"><i class="fa fa-usd" aria-hidden="true"></i></span>
             <br><br>
@@ -77,10 +78,15 @@
                 <i class="fa fa-superpowers" aria-hidden="true"></i> <input type="radio" name="answer" value="Other"
                                                                             ng-model="$parent.gender"/>Other<br>
             </lebal>
+
             <br>
-            <input type="submit" value="sign up">
+            <input type="submit" value="Save" ng-click="myFunc()">
+
         </form>
+        {{user}}
     </div>
 </div>
+<script src="sidebar.js"></script>
+
 </body>
 </html>
