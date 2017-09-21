@@ -97,6 +97,7 @@ angular
         templateUrl:'views/form.html',
         url:'/form'
     })
+
       .state('dashboard.blank',{
         templateUrl:'views/pages/blank.html',
         url:'/blank'
@@ -153,6 +154,10 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
+        .state('dashboard.employee',{
+            templateUrl:'views/employee.html',
+            url:'/employee'
+        })
   }]);
 
     

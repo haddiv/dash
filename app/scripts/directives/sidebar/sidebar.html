@@ -11,11 +11,17 @@
 
             </li>
             <li ui-sref-active="active">
+                <a ui-sref="dashboard.employee"><i class="fa fa-edit fa-fw"></i>employee</a>
+            </li>
+            <li ui-sref-active="active">
                 <a ui-sref="dashboard.table"><i class="fa fa-table fa-fw"></i> Tables</a>
             </li>
             <li ui-sref-active="active">
                 <a ui-sref="dashboard.form"><i class="fa fa-edit fa-fw"></i> Forms</a>
             </li>
+
+
+
             <li ng-class="{active: collapseVar==1}">{{dropDown}}
                 <a href="" ng-click="check(1)"><i class="fa fa-wrench fa-fw"></i> UI Elements<span
                         class="fa arrow"></span></a>
@@ -89,9 +95,7 @@
             <li><a href="http://www.strapui.com/">Premium Angular Themes</a></li>
 
 
-        <li ui-sref-active="active">
-            <a ui-sref="dashboard.staff_list"><i class="fa fa-edit fa-fw"></i>staff list</a>
-        </li>
+
         </ul>
     </div>
     <!-- /.sidebar-collapse -->
