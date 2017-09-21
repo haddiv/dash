@@ -17,3 +17,6 @@ angular.module('sbAdminApp')
     .controller('FormCtrl', function($scope) {
         $scope.years = YearArr;
     });
+$scope.goToPage = function () {
+    
+}
