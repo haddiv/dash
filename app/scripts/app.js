@@ -153,6 +153,10 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
+      .state('dashboard.registration',{
+        templateUrl:'views/registration.html',
+        url:'/registration'
+    })
   }]);
 
     
