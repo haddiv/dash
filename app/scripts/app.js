@@ -153,6 +153,10 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
+        .state('dashboard.FormExampleJson',{
+            templateUrl:'views/FormExampleJson.html',
+            url:'/FormExampleJson'
+        })
   }]);
 
     
