@@ -124,19 +124,9 @@ angular
                 }
             }
         })
-        .state('employeesForm.addTextArea', {
-            templateUrl:'scripts/directives/education/edu.html',
-            url:'/employeesForm',
-            directive:'education',
-            resolve: {
-                loadMyFile:function($ocLazyLoad) {
-
-                    $ocLazyLoad.load({
-                        name:'sbAdminApp',
-                        files:['scripts/controllers/addTextArea.js']
-                    })
-                }
-            }
+        .state('.addTextArea', {
+            url:'/education',
+            templateUrl:'scripts/directives/edu.html'
         })
 
       .state('dashboard.chart',{
