@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>form</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <link rel="stylesheet" href="./styles/timeline.css">
-</head>
-<body ng-app="sbAdminApp" ng controller="ExampleController">
-<div class="form-view" >
+
+
+<div class="form-view" ng-controller="ExampleController">
     <h2 class="sub-head">Information</h2>
     <div class="sub-main">
         <form name="myForm">
@@ -83,10 +76,9 @@
             <input type="submit" value="Save" ng-click="myFunc()">
 
         </form>
-        {{user}}
+
     </div>
 </div>
-<script src="sidebar.js"></script>
 
-</body>
-</html>
+
+

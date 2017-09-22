@@ -39,9 +39,13 @@ angular.module('sbAdminApp')
     }
   }]);
 
-angular.module('sbAdminApp');
-    .controller('ExampleController', ['$scope', function (user) {
-        $scope.myFunc = function(name) {
-            console.log(name);
-        };
+
+angular.module('sbAdminApp')
+
+    .controller('ExampleController', ['$scope', function ($scope) {
+        $scope.user={}
+        $scope.names = ["director", "menejer", "broker"];
+        $scope.myFunc = function(x) {
+            console.log(x)
+        }
     }]);

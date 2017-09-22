@@ -153,7 +153,7 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
-        .state('dashboard.register',{
+        .state('dashboard.aboutUser',{
             templateUrl:'views/aboutUser.html',
             url:'/aboutUser'
         })
