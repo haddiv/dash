@@ -153,6 +153,10 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
+	.state('data_form',{
+       templateUrl:'views/data_form.html',
+       url:'/data_form.html'
+   })
   }]);
 
     

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <style>
+        .span3 {
+            width: 80%;
+        }
+
+        .radio {
+            margin-left: 2% !important;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div  ng-app="app">
+    <form ng-controller="form_ctrl" name="form">
+        <div class="col-md-6 form">
+            <label>Name</label>
+            <br>
+            <input type="text" name="name" class="span3" ng-model="data.name">
+            <br>
+            <label>Surname</label>
+            <br>
+            <input type="text" name="surname" class="span3" ng-model="data.surname">
+            <br>
+            <label>Email Address</label>
+            <br>
+            <input type="email" name="email" class="span3" ng-model="data.email">
+            <br>
+            <label>Personal data</label>
+            <br>
+            <textarea name="personal_data" class="span3" ng-model="data.personalData"></textarea>
+            <br>
+            <label>Phone number</label>
+            <br>
+            <input type="text" name="phone" class="span3" ng-model="data.phone">
+            <br>
+            <label>Male</label><input type="radio" name="gender" class="radio" value="male" ng-model="data.gender">
+            <label>Female</label><input type="radio" name="gender" class="radio" value="female" ng-model="data.gender">
+            <br>
+            <label>Salary</label>
+            <br>
+            <input type="text" name="salary" class="span3" ng-model="data.salary">
+            <br>
+            <label> Month Day Year</label>
+            <br>
+            <input type="date" value="born_data" name="born_data" class="span3" ng-model="data.born">
+            <br>
+            <label> Education</label>
+            <br>
+            <input type="text" name="education" class="span3" ng-model="data.education">
+            <br>
+            <input type="submit" value="Save" class="btn btn-primary"ng-click="value(data)" 
+                   ng-disabled="form.name.$dirty && form.name.$invalid">
+
+            <div class="clearfix"></div>
+        </div>
+    </form>
+</div>
+<script>
+    var app = angular.module("app", []);
+    app.controller("form_ctrl", function ($scope) {
+            $scope.data={};
+                $scope.value = function(x) {
+                    var person = JSON.stringify(x)
+                };
+    });
+</script>
+</body>
+</html>
