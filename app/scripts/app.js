@@ -101,10 +101,7 @@ angular
             templateUrl:'views/employees.html',
             url:'/employees'
         })
-        .state('dashboard.employeesForm',{
-            templateUrl:'views/employeesForm.html',
-            url:'/employeesForm'
-        })
+
       .state('dashboard.blank',{
         templateUrl:'views/pages/blank.html',
         url:'/blank'
@@ -113,10 +110,40 @@ angular
         templateUrl:'views/pages/login.html',
         url:'/login'
     })
+        .state('dashboard.employeesForm',{
+            templateUrl:'views/employeesForm.html',
+            url:'/employeesForm',
+            controller:'employeesFormCtrl',
+            resolve: {
+                loadMyFile:function($ocLazyLoad) {
+
+                        $ocLazyLoad.load({
+                            name:'sbAdminApp',
+                            files:['scripts/controllers/employeesFormCotroller.js']
+                        })
+                }
+            }
+        })
+        .state('employeesForm.addTextArea', {
+            templateUrl:'scripts/directives/education/edu.html',
+            url:'/employeesForm',
+            directive:'education',
+            resolve: {
+                loadMyFile:function($ocLazyLoad) {
+
+                    $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:['scripts/controllers/addTextArea.js']
+                    })
+                }
+            }
+        })
+
       .state('dashboard.chart',{
         templateUrl:'views/chart.html',
         url:'/chart',
         controller:'ChartCtrl',
+
         resolve: {
           loadMyFile:function($ocLazyLoad) {
             return $ocLazyLoad.load({
@@ -161,6 +188,7 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
+
   }]);
 
     

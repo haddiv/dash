@@ -1,0 +1,18 @@
+<div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+    <p> Name </p>
+    <textarea class="form-control"> </textarea>
+</div>
+<div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+    <p> Speciality: </p>
+    <textarea class="form-control "> </textarea>
+</div>
+<div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+    <p>Have studied from -- to: </p>
+
+    <select class="form-control selectBoxStyle marginRight">
+        <option ng-repeat="year in years">{{ year }}</option>
+    </select>
+    <select  class="form-control selectBoxStyle">
+        <option ng-repeat="year in years">{{ year }}</option>
+    </select>
+</div>
