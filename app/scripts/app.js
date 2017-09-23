@@ -13,6 +13,7 @@ angular
     'ui.router',
     'ui.bootstrap',
     'angular-loading-bar',
+
   ])
   .config(['$stateProvider','$urlRouterProvider','$ocLazyLoadProvider',function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
     
@@ -159,4 +160,114 @@ angular
         })
   }]);
 
+sbAdminApp.controller("cont",function ($scope) {
+
+    $scope.listProduct =[
+
+        {   id: 1,
+            name: "Mariam",
+            surename: "Poghosyan",
+            fathername: "Ashot",
+            position: "Manager",
+            dateofemployment: "12.03.2013",
+            email: "Poghosyan@gmail.com",
+            dateofebirth: "21.03.1996",
+            address: "Spandaryan 87",
+            department:"Marketing",
+            gender: "Female",
+            personalcarac: "gtgtgtgtgtgtgtgtgtgtgtgtgtgtgtgtgtg",
+            image: "url",
+            salary: "130000",
+            education: "Bacalourus degree",
+            phonenumber: "099889988"
+        }
+    ];
+    $scope.del = function (id) {
+        var index = getSelectedIndex(id);
+        $scope.listProduct.splice(index,1);
+    };
+    function getSelectedIndex(id) {
+        for(var i=0; i<$scope.listProduct.length; i++)
+            if($scope.listProduct[i].id==id)
+                return i;
+        return -1;
+    }
+    $scope.edit = function (id) {
+        var index =  getSelectedIndex(id);
+        var product = $scope.listProduct[index];
+        $scope.id =product.id;
+        $scope.name =product.name;
+        $scope.surename =product.surename;
+        $scope.fathername =product.fathername;
+        $scope.position =product.position;
+        $scope.dateofemployment =product.dateofemployment;
+        $scope.email =product.email;
+        $scope.dateofebirth =product.dateofebirth;
+        $scope.address =product.address;
+        $scope.department =product.department;
+        $scope.gender =product.gender;
+        $scope.personalcarac =product.personalcarac;
+        $scope.image =product.image;
+        $scope.salary =product.salary;
+        $scope.education =product.education;
+        $scope.phonenumber =product.phonenumber;
+
+    };
+    $scope.add =function (id) {
+        $scope.listProduct.push ({
+            id:$scope.id,
+            name:$scope.name,
+            surename:$scope.surename,
+            fathername:$scope.fathername,
+            position:$scope.position,
+            dateofemployment:$scope.dateofemployment,
+            email:$scope.email,
+            dateofebirth:$scope.dateofebirth,
+            address:$scope.address,
+            department:$scope.department,
+            gender:$scope.gender,
+            personalcarac:$scope.personalcarac,
+            image:$scope.image,
+            salary:$scope.salary,
+            education:$scope.education,
+            phonenumber:$scope.phonenumber
+        });
+        $scope.id = "";
+        $scope.name='';
+        $scope.surename='';
+        $scope.fathername="";
+        $scope.position="";
+        $scope.dateofemployment="";
+        $scope.email="";
+        $scope.dateofebirth="";
+        $scope.address="";
+        $scope.department="";
+        $scope.gender="";
+        $scope.personalcarac="";
+        $scope.image="";
+        $scope.salary="";
+        $scope.education="";
+        $scope.phonenumber="";
+    };
+    $scope.save = function (id) {
+        var index = getSelectedIndex($scope.id);
+        $scope.listProduct[index].id =$scope.id;
+        $scope.listProduct[index].name =$scope.name;
+        $scope.listProduct[index].surename =$scope.surename;
+        $scope.listProduct[index].fathername =$scope.fathername;
+        $scope.listProduct[index].position =$scope.position;
+        $scope.listProduct[index].dateofemployment =$scope.dateofemployment;
+        $scope.listProduct[index].email =$scope.email;
+        $scope.listProduct[index].dateofebirth =$scope.dateofebirth;
+        $scope.listProduct[index].address =$scope.address;
+        $scope.listProduct[index].department =$scope.department;
+        $scope.listProduct[index].gender =$scope.gender;
+        $scope.listProduct[index].personalcarac =$scope.personalcarac;
+        $scope.listProduct[index].image =$scope.image;
+        $scope.listProduct[index].salary =$scope.salary;
+        $scope.listProduct[index].education =$scope.education;
+        $scope.listProduct[index].phonenumber =$scope.phonenumber;
+
+    }
+});
     

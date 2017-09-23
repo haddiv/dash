@@ -9,31 +9,31 @@
     <form class="form-horizontal" role="form">
         <h2>Registration Form</h2>
         <div class="form-group">
-            <label for="id" class="col-sm-3 control-label">ID</label>
+            <label for="id" class="col-sm-3 control-label" ng-model="id">ID</label>
             <div class="col-sm-9">
                 <input type="number" id="id" placeholder="Id" class="form-control" autofocus>
             </div>
         </div>
         <div class="form-group">
-            <label for="firstName" class="col-sm-3 control-label">Name</label>
+            <label for="firstName" class="col-sm-3 control-label" ng-model="name">Name</label>
             <div class="col-sm-9">
                 <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus>
             </div>
         </div>
         <div class="form-group">
-            <label for="Surename" class="col-sm-3 control-label">SureName</label>
+            <label for="Surename" class="col-sm-3 control-label" ng-model="surename">SureName</label>
             <div class="col-sm-9">
                 <input type="text" id="Surename" placeholder="Surename" class="form-control" autofocus>
             </div>
         </div>
         <div class="form-group">
-            <label for="FaterName" class="col-sm-3 control-label">FatherName</label>
+            <label for="FaterName" class="col-sm-3 control-label" ng-model="fathername">FatherName</label>
             <div class="col-sm-9">
                 <input type="text" id="FaterName" placeholder="FatherName" class="form-control" autofocus>
             </div>
         </div>
         <div class="form-group">
-        <label for="Proffesion" class="col-sm-3 control-label">Position</label>
+        <label for="Proffesion" class="col-sm-3 control-label" ng-model="position">Position</label>
         <div class="col-sm-9">
             <select id="Proffesion" class="form-control">
                 <option>Manager</option>
@@ -46,31 +46,31 @@
         </div>
     </div>
         <div class="form-group">
-            <label for="birthDate" class="col-sm-3 control-label">Date of Employment</label>
+            <label for="birthDate" class="col-sm-3 control-label" ng-model="dateofemployment">Date of Employment</label>
             <div class="col-sm-9">
                 <input type="date" id="employment" class="form-control">
             </div>
         </div>
         <div class="form-group">
-            <label for="email" class="col-sm-3 control-label">Email</label>
+            <label for="email" class="col-sm-3 control-label" ng-model="email">Email</label>
             <div class="col-sm-9">
                 <input type="email" id="email" placeholder="Email" class="form-control">
             </div>
         </div>
         <div class="form-group">
-            <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+            <label for="birthDate" class="col-sm-3 control-label" ng-model="dateofbirth">Date of Birth</label>
             <div class="col-sm-9">
                 <input type="date" id="birthDate" class="form-control">
             </div>
         </div>
         <div class="form-group">
-            <label for="address" class="col-sm-3 control-label">Address</label>
+            <label for="address" class="col-sm-3 control-label" ng-model="address">Address</label>
             <div class="col-sm-9">
                 <input type="text" id="address" placeholder="Address" class="form-control" autofocus>
             </div>
         </div>
         <div class="form-group">
-            <label for="department" class="col-sm-3 control-label">Department</label>
+            <label for="department" class="col-sm-3 control-label" ng-model="department">Department</label>
             <div class="col-sm-9">
                 <select id="department" class="form-control">
                     <option>Managment</option>
@@ -82,7 +82,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-sm-3">Gender</label>
+            <label class="control-label col-sm-3" ng-model="gender">Gender</label>
             <div class="col-sm-6">
                 <div class="row">
                     <div class="col-sm-4">
@@ -104,28 +104,28 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="exampleTextarea">Personal Characteristics</label>
+            <label for="exampleTextarea" ng-model="personalcharac">Personal Characteristics</label>
             <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Personal Characteristics"></textarea>
         </div>
         <div class="form-group">
-            <label for="exampleInputFile" class="col-sm-3 control-label">Input Your Image</label>
+            <label for="exampleInputFile" class="col-sm-3 control-label" ng-model="image">Input Your Image</label>
             <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
             <small id="fileHelp" class="form-text text-muted"></small>
         </div>
         <div class="form-group">
-            <label for="Salary" class="col-sm-3 control-label">Salary</label>
+            <label for="Salary" class="col-sm-3 control-label" ng-model="salary">Salary</label>
             <div class="col-sm-9">
                 <input type="number" id="Salary" placeholder="Salary" class="form-control" autofocus>
             </div>
         </div>
         <div class="form-group">
-            <label for="Education" class="col-sm-3 control-label">Education</label>
+            <label for="Education" class="col-sm-3 control-label" ng-model="education">Education</label>
             <div class="col-sm-9">
                 <input type="text" id="Education" placeholder="Education" class="form-control" autofocus>
             </div>
         </div>
         <div class="form-group">
-            <label for="Phone" class="col-sm-3 control-label">Phone Number</label>
+            <label for="Phone" class="col-sm-3 control-label" ng-model="phonenumber">Phone Number</label>
             <div class="col-sm-9">
                 <input type="text" id="Phone" placeholder="Phone Number" class="form-control" autofocus>
             </div>
@@ -141,10 +141,58 @@
         </div>
         <div class="form-group">
             <div class="col-sm-9 col-sm-offset-3">
-                <button class="btn btn-primary btn-block">Register</button>
+                <button class="btn btn-primary btn-block" ng-click="save()">Register</button>
             </div>
         </div>
     </form>
 </div>
+
+<table class="table" cellpadding="2" cellspacing="2">
+    <thead class="thead-inverse">
+    <tr>
+        <th>N</th>
+        <th>Name</th>
+        <th>Surename</th>
+        <th>FatherName</th>
+        <th>Position</th>
+        <th>DateOfEmployment</th>
+        <th>Email</th>
+        <th>DateOfBirth</th>
+        <th>Address</th>
+        <th>Department</th>
+        <th>Gender</th>
+        <th>PersonalCaracterestics</th>
+        <th>Image</th>
+        <th>Salary</th>
+        <th>Education</th>
+        <th>PhoneNumber</th>
+        <th>Delate</th>
+        <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="product in listProduct">
+        <th scope="row">{{product.id}}</th>
+        <td>{{product.name}}</td>
+        <td>{{product.surename}}</td>
+        <td>{{product.fathername}}</td>
+        <td>{{product.position}}</td>
+        <td>{{product.dateofemployment}}</td>
+        <td>{{product.email}}</td>
+        <td>{{product.dateofebirth}}</td>
+        <td>{{product.address}}</td>
+        <td>{{product.department}}</td>
+        <td>{{product.gender}}</td>
+        <td>{{product.personalcarac}}</td>
+        <td>{{product.image}}</td>
+        <td>{{product.salary}}</td>
+        <td>{{product.education}}</td>
+        <td>{{product.phonenumber}}</td>
+        <td><button type="button" class="btn btn-outline-danger" ng-click="del(product.id)">Delate</button></td>
+        <td><button type="button" class="btn btn-outline-warning" ng-click="edit(product.id)">Edit</button></td>
+    </tr>
+
+    </tbody>
+</table>
             <!-- /.panel-body -->
 
