@@ -128,3 +128,6 @@ background-color: #eee;
   padding: 2px;
   float: left;
 }
+.clear{
+  clear: both;
+}

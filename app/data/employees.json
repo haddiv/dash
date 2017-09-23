@@ -1,0 +1,18 @@
+[{
+  "id": 1,
+  "checkbox": "",
+  "image": "",
+  "name": "Asti",
+  "lastName": "Sargsyan",
+  "position": "position",
+  "salary": "number"
+},
+{
+  "id": 2,
+  "checkbox": "",
+  "image": "",
+  "name": "Gogi",
+  "lastName": "Hovhannisyan",
+  "position": "position",
+  "salary": "number"
+}]

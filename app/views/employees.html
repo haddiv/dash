@@ -25,3 +25,18 @@
             </tr>
         </table>
 
+        <table class="table table-bordered">
+            <tbody>
+
+                    <tr ng-repeat="em in employees" ng-init="current=1" >
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td ng-bind="em.image"></td>
+                        <td ng-bind="em.name"></td>
+                        <td ng-bind="em.surname"></td>
+                        <td ng-bind="em.position"></td>
+                        <td ng-bind="em.salary"></td>
+                </tr>
+            </tbody>
+
+        </table>

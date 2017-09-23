@@ -11,9 +11,19 @@
                 <div class="row margin">
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
                         <p> Gender </p>
-                            <label><input type="radio" name="gender" value="male"> Male </label>
+                            <label><input type="radio" name="gender" value="male"  checked> Male </label>
                             <label><input type="radio" name="gender" value="female"> female</label>
                             <label><input type="radio" name="gender" value="other"> other</label>
+
+                        <md-form-field class="example-full-width">
+                            <input mdInput [min]="minDate" [max]="maxDate" [mdDatepicker]="picker" placeholder="Choose a date">
+                            <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+                            <md-datepicker #picker></md-datepicker>
+                        </md-form-field>
+
+
+
+
 
                     </div>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
@@ -77,31 +87,39 @@
             <div class="row margin">
                 <fieldset>
                     <legend>Education, experience and skills :</legend>
+
+                    <div id="mainDiv">
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
                         <p> Name </p>
                         <textarea class="form-control"> </textarea>
                     </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p> Speciality: </p>
-                        <textarea class="form-control "> </textarea>
-                    </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                            <p>Studied from -- to: </p>
+                        <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                            <p> Speciality: </p>
+                            <textarea class="form-control "> </textarea>
+                        </div>
+                        <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                                <p>Studied from -- to: </p>
 
-                            <select class="form-control selectBoxStyle marginRight">
-                                <option> -- </option>
-                                <option ng-repeat="year in years">{{ year }}</option>
-                            </select>
-                            <select  class="form-control selectBoxStyle">
-                                <option> -- </option>
-                                <option ng-repeat="year in years">{{ year }}</option>
-                            </select>
+                                <select class="form-control selectBoxStyle marginRight">
+                                    <option> -- </option>
+                                    <option ng-repeat="year in years">{{ year }}</option>
+                                </select>
+                                <select  class="form-control selectBoxStyle">
+                                    <option> -- </option>
+                                    <option ng-repeat="year in years">{{ year }}</option>
+                                </select>
+                        </div>
                     </div>
-                    <div ui-view> </div>
+                    <div class="clear"> </div>
+                    <div class="clear" id="cloneDiv"> </div>
+                </fieldset>
+                    </div>
+                    <div class="row margin">
                     <div class="submitButtonClass">
-                        <a class="btn btn-primary" ui-sref=".addTextArea"> +  </a>
+                        <a class="btn btn-primary" ng-click="clickToClone('mainDiv', 'cloneDiv')"> +  </a>
                     </div>
-                    <div ui-view> </div>
+                    <div class="clear"> </div>
+
                     </fieldset>
             </div>
             <div class="row margin">
@@ -129,6 +147,7 @@
                     <div class="submitButtonClass">
                         <input type="button" value="+" class="btn btn-primary">
                     </div>
+
 
             </div>
             <div class="row">
