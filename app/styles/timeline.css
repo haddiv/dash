@@ -180,7 +180,7 @@
 }
 
 body {
-    background: url('bg.jpg') no-repeat 0 87% fixed;
+
     background-size: cover;
     font-family: 'Lato', sans-serif;
     text-align: center;
@@ -189,12 +189,12 @@ body {
 .form-view {
     margin: 1% auto;
     background: rgba(125, 63, 152, 0.52);
-    width:35%;
+    width:40%;
     font-family: 'Lato', sans-serif;
 }
 
 .sub-head {
-    font-size: 38px;
+    font-size: 40px;
     padding: 25px;
     color: white;
     text-transform: uppercase;
@@ -251,15 +251,15 @@ body {
 }
 
 .icon10 {
-    top: 580px;
+    top: 530px;
 }
 
 .icon11 {
-    top: 745px;
+    top: 690px;
 }
 
 .icon12 {
-    top: 785px;
+    top: 745px;
 }
 
 /*--//icons--*/
@@ -304,25 +304,7 @@ body {
     -ms-transition: 0.5s all;
 }
 
-.sub-main input.ng-valid {
-    background: #fff url(ico_validation.png) 340px -50px no-repeat;
-}
 
-.sub-main input.ng-invalid-email {
-    background: #fff url(ico_validation.png) 340px 12px no-repeat;
-}
-
-.sub-main input.ng-invalid-minlength {
-    background: #fff url(ico_validation.png) 340px -20px no-repeat;
-}
-
-.sub-main input.ng-invalid-maxlength {
-    background: #fff url(ico_validation.png) 340px 12px no-repeat;
-}
-
-.sub-main input.ng-invalid-pattern {
-    background: #fff url(ico_validation.png) 340px -20px no-repeat;
-}
 
 .mis_pwd {
     color: white;
