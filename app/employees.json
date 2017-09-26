@@ -1,0 +1,12 @@
+var jsonObj={
+"id":"null",
+"fname":"",
+"lname":"",
+"bdate":"",
+"email":"",
+"phone":"",
+"address":"",
+"position":"",
+"department":"",
+"gender":"",
+"other":""};
