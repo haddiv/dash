@@ -7,77 +7,335 @@ body {
 .header,
 .marketing,
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
 }
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
 }
 
 /* Customize container */
 @media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+    .container {
+        max-width: 730px;
+    }
 }
+
 .container-narrow > hr {
-  margin: 30px 0;
+    margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 .jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+    font-size: 21px;
+    padding: 14px 24px;
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+    margin: 40px 0;
 }
+
 .marketing p + h4 {
-  margin-top: 28px;
+    margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
 }
 
-.nav>li.active>a {
-text-decoration: none;
-background-color: #eee;
+.nav > li.active > a {
+    text-decoration: none;
+    background-color: #eee;
 }
+
+.title {
+    color: #337ab7;
+}
+
+.btn-pos {
+    float: right;
+}
+
+/* Icon when the collapsible content is shown */
+.btn1:after {
+    font-family: "Glyphicons Halflings";
+    content: "\e114";
+    float: right;
+    margin-left: 15px;
+}
+
+/* Icon when the collapsible content is hidden */
+.btn1.collapsed:after {
+    content: "\e080";
+}
+
+/* sdvsdv*/
+.icon1, .icon2 i.fa {
+    font-size: 1.3em;
+    color: #FFF;
+    color: #337ab7;
+}
+
+.icon1 {
+    margin: 0 0 1em;
+    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #616161;
+    padding: .8em 1em .8em .4em;
+}
+
+.icon3 i.fa {
+    font-size: 1.1em;
+    color: #FFF;
+    color: #337ab7;
+}
+
+.icon3 {
+    margin: 0 0 1em;
+    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #616161;
+    padding: .8em 1em .8em .4em;
+}
+
+.view input[type="text"] {
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    border: none;
+    width: 90%;
+    padding-left: 15px;
+    display: inline-block;
+    background: transparent;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.view input[type="email"] {
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    border: none;
+    width: 89%;
+    padding-left: 12px;
+    display: inline-block;
+    background: transparent;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.view input[type="tel"] {
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    border: none;
+    width: 90%;
+    padding-left: 15px;
+    display: inline-block;
+    background: transparent;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.view input[type="password"] {
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    border: none;
+    width: 90%;
+    padding-left: 15px;
+    display: inline-block;
+    background: transparent;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.view input[type="submit"] {
+    background: #c4514c;
+    background: #4CAF50;
+    color: #FFF;
+    font-size: 16px;
+    padding: .5em 1em;
+    width: 37%;
+    letter-spacing: 0px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.view input[type="submit"]:hover {
+    background: #11732b;
+    background: #ffc772;
+    background: #015f86;
+    background: #0091cd;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+.view input.ng-valid {
+    background: #fff url(../views/ico_validation.png) 185px -58px no-repeat;
+}
+
+.view input.ng-invalid-email {
+    background: #fff url(../views/ico_validation.png) 185px 5px no-repeat;
+}
+
+.view input.ng-invalid-minlength {
+    background: #fff url(../views/ico_validation.png) 185px -25px no-repeat;
+}
+
+.view input.ng-invalid-maxlength {
+    background: #fff url(../views/ico_validation.png) 185px 5px no-repeat;
+}
+
+.view input.ng-invalid-pattern {
+    background: #fff url(../views/ico_validation.png) 185px -20px no-repeat;
+}
+
+.radio {
+    padding-left: 20px;
+}
+
+.radio label {
+    display: inline-block;
+    position: relative;
+    padding-left: 5px;
+}
+
+.radio label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out;
+}
+
+.radio label::after {
+    display: inline-block;
+    position: absolute;
+    content: " ";
+    width: 11px;
+    height: 11px;
+    left: 3px;
+    top: 3px;
+    margin-left: -20px;
+    border-radius: 50%;
+    background-color: #555555;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+
+.radio input[type="radio"] {
+    opacity: 0;
+}
+
+.radio input[type="radio"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.radio input[type="radio"]:checked + label::after {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.radio input[type="radio"]:disabled + label {
+    opacity: 0.65;
+}
+
+.radio input[type="radio"]:disabled + label::before {
+    cursor: not-allowed;
+}
+
+.radio.radio-inline {
+    margin-top: 0;
+}
+
+.radio-primary input[type="radio"] + label::after {
+    background-color: #337ab7;
+}
+
+.radio-primary input[type="radio"]:checked + label::before {
+    border-color: #337ab7;
+}
+
+.radio-primary input[type="radio"]:checked + label::after {
+    background-color: #337ab7;
+}
+
+.any {
+    color: white;
+}
+
+.sel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.to {
+    margin-top: 25px;
+}
+
