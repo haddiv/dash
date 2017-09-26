@@ -48,13 +48,13 @@ http.createServer(function (req, res) {
 							
 							/* employee_json = JSON.stringify(jsonArray);
 							fs.appendFile('../data/employees.json', employee_json , function (err) {
-							  if (err) throw err;
+							  if (err) throw err; */
 							  
 								
-								}) */
+								//})
 								})
 							}
-  }; 			   }) 
+ }; 			   }) 
 			
     }  
    // console.log(q)

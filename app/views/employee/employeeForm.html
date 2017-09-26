@@ -3,26 +3,27 @@
 
 
                 <h1 class="modal-title">Information List</h1>
+				
 
-            <form action="http://localhost:1337/create" target="_blank" method="get"  enctype="multipart/form-data" id="empoyeeRegistration">
+            <form action="http://localhost:1337/create" target="_blank" method="post"  enctype="multipart/form-data">
                 <div class = "row col-md-6">
                     <h3>Personal Information</h3>
                     <div class="form-group col-md-6" >
                         <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" ng-model="name" name="name">
+                        <input type="text" class="form-control" id="name" ng-model="name" name="firstName">
 
                     </div>
                     <div class="form-group  col-md-6">
                         <label for="surname">Last Name</label>
-                        <input type="text" class="form-control" id="surname" ng-model="surname" name="surname">
+                        <input type="text" class="form-control" id="surname" ng-model="surname" name="lastName">
                     </div>
 
                     <div class="form-group  col-md-6">
                         <label>Gender:</label>
                         <label class="radio-inline" for = "male" ng-model="gender">Male</label>
-                        <input type="radio" name="optradio" id = "male">
+                        <input type="radio" name="optradio" id = "male" name="gender">
                         <label class="radio-inline" for = "female" >Female</label>
-                        <input type="radio" name="optradio" id = "female" ng-model="gender">
+                        <input type="radio" name="optradio" id = "female" ng-model="gender" name="gender">
                     </div>
 
                     <!--<datepicker>-->
@@ -36,26 +37,26 @@
 
                     <div class="form-group  col-md-6">
                         <label for="email">Email</label>
-                        <input type="password" class="form-control" id="email">
+                        <input type="text" class="form-control" id="email" name="mail">
                     </div>
 
                     <div class="form-group  col-md-6">
                         <label class="mr-sm-2" for="region">Region</label><br/>
-                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="region">
-                            <option selected>Choose...</option>
-                            <option value="1">Shirak</option>
-                            <option value="2">Lori</option>
-                            <option value="3">Tavush</option>
+                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="region" name="region">
+                            <option selected >Choose...</option>
+                            <option >Shirak</option>
+                            <option>Lori</option>
+                            <option >Tavush</option>
                         </select>
                     </div>
 
                     <div class="form-group  col-md-6">
                         <label class="mr-sm-2" for="city">City</label><br/>
-                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="city">
+                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="city" name="city">
                             <option selected>Choose...</option>
-                            <option value="1">Shirak</option>
-                            <option value="2">Lori</option>
-                            <option value="3">Tavush</option>
+                            <option >Shirak</option>
+                            <option >Lori</option>
+                            <option >Tavush</option>
                         </select>
                     </div>
 
@@ -63,7 +64,7 @@
 
                     <div class="form-group  col-md-6">
                         <label for="adress">Full Adress</label>
-                        <input type="password" class="form-control" id="adress">
+                        <input type="password" class="form-control" id="adress" name="adress">
                     </div>
 
                 </div>
@@ -73,33 +74,33 @@
 
                     <div class="form-group  col-md-6">
                         <label for="pos">Position</label>
-                        <input type="password" class="form-control" id="pos">
+                        <input type="text" class="form-control" id="pos" name="position">
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="startWork" class="col-2 col-form-label">Start work</label><br/>
-                        <input class="form-control" type="date" value="2011-08-19" id="startWork">
+                        <input class="form-control" type="date" value="2011-08-19" id="startWork" name="startWork">
                     </div>
 
                     <div class="form-group  col-md-6">
                         <label for="wage">Wage rate</label>
-                        <input type="text" class="form-control" id="wage">
+                        <input type="text" class="form-control" id="wage" name="wage">
                     </div>
 
                     <div class="form-group  col-md-6">
                         <label class="mr-sm-2" for="department">Department</label><br/>
-                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="department">
+                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="department" name="department">
                             <option selected>Choose...</option>
-                            <option value="1">Foreign Affairs</option>
-                            <option value="2">PR</option>
-                            <option value="3">HR</option>
-                            <option value="3">Marketing</option>
+                            <option >Foreign Affairs</option>
+                            <option >PR</option>
+                            <option >HR</option>
+                            <option >Marketing</option>
                         </select>
                     </div>
 
                     <div class="form-group col-md-12">
                         <label for="characteristics">Characteristics:</label>
-                        <textarea class="form-control" rows="5" id="characteristics"></textarea>
+                        <textarea class="form-control" rows="5" id="characteristics" name="characteristics"></textarea>
                     </div>
 
                 </div>
@@ -110,28 +111,28 @@
                     <div class = "educationSection">
                         <div class="form-group  col-md-6">
                             <label for="universaty">Universaty/Colage</label>
-                            <input type="text" class="form-control" id="universaty">
+                            <input type="text" class="form-control" id="universaty" name="universaty[]">
                         </div>
 
 
                         <div class="form-group  col-md-6">
                             <label for="specialization">Specialization</label>
-                            <input type="text" class="form-control" id="specialization">
+                            <input type="text" class="form-control" id="specialization" name="specialization[]">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="admissionYear" class="col-2 col-form-label">From</label>
-                            <input class="form-control" type="date" value="2011-08-19" id="admissionYear">
+                            <input class="form-control" type="date" value="2011-08-19" id="admissionYear" name="admissionYear[]">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="graduatedYear" class="col-2 col-form-label">To
                             </label>
-                            <input class="form-control" type="date" value="2011-08-19" id="graduatedYear">
+                            <input class="form-control" type="date" value="2011-08-19" id="graduatedYear" name="graduatedYear[]">
 
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary" style = "float:right">+</button>
+                    <button type="button" class="btn btn-primary" style = "float:right" ng-click="addFields()">+</button>
 
                 </div>
 
@@ -141,22 +142,22 @@
                     <div class = "workSection">
                         <div class="form-group  col-md-6">
                             <label for="organization">Organization</label>
-                            <input type="text" class="form-control" id="organization">
+                            <input type="text" class="form-control" id="organization" name="organization[]">
                         </div>
                         <div class="form-group  col-md-6">
                             <label for="position">Position</label>
-                            <input type="text" class="form-control" id="position">
+                            <input type="text" class="form-control" id="position" name="position2[]">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="startedYear" class="col-2 col-form-label">From</label>
-                            <input class="form-control" type="date" value="2011-08-19" id="startedYear">
+                            <input class="form-control" type="date" value="2011-08-19" id="startedYear" name="startedYear[]">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="quitYear" class="col-2 col-form-label">To
                             </label>
-                            <input class="form-control" type="date" value="2011-08-19" id="quitYear">
+                            <input class="form-control" type="date" value="2011-08-19" id="quitYear" name="quitYear[]">
 
                         </div>
                     </div>
@@ -167,7 +168,7 @@
 
 
                 <div class="row col-md-6">
-                    <button form="empoyeeRegistration" type="submit" class="btn btn-primary" ng-click="save()">Save</button>
+                    <button  type="submit" class="btn btn-primary" ng-click="save()">Save</button>
                     <button type="" class="btn btn-primary" data-dismiss="modal">Update</button>
                     <button type="" class="btn btn-primary" data-dismiss="modal">Reset</button>
                 </div>
