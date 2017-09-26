@@ -8,6 +8,7 @@
  */
 angular.module('sbAdminApp')
   .controller('employeeController', function($scope, $http) {
+
   
           $scope.save = function(){
 		 			$scope.obj = [{
