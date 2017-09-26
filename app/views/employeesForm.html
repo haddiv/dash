@@ -1,41 +1,29 @@
 
-    <div class="container" ng-controller="employeesFormCtrl">
-        <form class="margin">
+        <form action="localhost:8080/create" target="_blank" method="post"  enctype="multipart/form-data" id="empoyeeRegistration">
             <fieldset>
                 <legend>Main Information </legend>
                 <div class="row margin">
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="name" class="form-control" placeholder="name"> </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="lastName" class="form-control" placeholder="Last name"></div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="name" class="form-control" placeholder="patronymic"></div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" ng-model="name" name="name" class="form-control" placeholder="name"> </div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" ng-model="lastName" name="lastName" class="form-control" placeholder="Last name"></div>
+                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" ng-model="patronymic" name="patronymic" class="form-control" placeholder="patronymic"></div>
                 </div>
                 <div class="row margin">
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
                         <p> Gender </p>
-                            <label><input type="radio" name="gender" value="male"  checked> Male </label>
-                            <label><input type="radio" name="gender" value="female"> female</label>
-                            <label><input type="radio" name="gender" value="other"> other</label>
-
-                        <md-form-field class="example-full-width">
-                            <input mdInput [min]="minDate" [max]="maxDate" [mdDatepicker]="picker" placeholder="Choose a date">
-                            <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
-                            <md-datepicker #picker></md-datepicker>
-                        </md-form-field>
-
-
-
-
-
+                            <label><input type="radio" ng-model="gender" name="gender" value="male"  ng-checked="checked" > Male </label>
+                            <label><input type="radio" ng-model="gender" name="gender" value="female"> female</label>
+                            <label><input type="radio" ng-model="gender" name="gender" value="other"> other</label>
                     </div>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
                             <p> Birthday </p>
                         <select class="form-control selectBoxDayStyle">
-                            <option ng-repeat="day in days">{{day}}</option>
+                            <option  ng-repeat="day in days" ng-model="day" ng-click="getValue($even.target)">{{day}}</option>
                         </select>
                         <select class="form-control selectBoxMonthStyle">
-                            <option ng-repeat="month in months">{{ month }}</option>
+                            <option ng-repeat="month in months" ng-model="month">{{ month }}</option>
                         </select>
                         <select class="form-control selectBoxStyle">
-                            <option ng-repeat="year in years">{{ year }}</option>
+                            <option ng-repeat="year in years" ng-model="year">{{ year }}</option>
                         </select>
                     </div>
 
@@ -73,12 +61,13 @@
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
                         <div class="uploadPhotoDiv">
                         </div>
+
                     </div>
                 </div>
             </fieldset>
             <div class="row margin">
                 <fieldset>
-                    <legend> Communication </legend>
+                    <legend> Contact </legend>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="phoneNumber" class="form-control" placeholder="Phone number"> </div>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="email" class="form-control" placeholder="e-mail"></div>
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="address" class="form-control" placeholder="Address"></div>
@@ -90,7 +79,7 @@
 
                     <div id="mainDiv">
                     <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p> Name </p>
+                        <p> Name of the institution </p>
                         <textarea class="form-control"> </textarea>
                     </div>
                         <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
@@ -120,7 +109,7 @@
                     </div>
                     <div class="clear"> </div>
 
-                    </fieldset>
+
             </div>
             <div class="row margin">
 
@@ -163,7 +152,6 @@
                 </fieldset>
             </div>
             <div class="submitButtonClass">
-                <input type="submit" value="Create" class="btn btn-primary">
+                <input type="submit" value="Create" class="btn btn-primary" >
             </div>
         </form>
-    </div>

@@ -24,4 +24,31 @@ angular.module('sbAdminApp')
             var sourceHtml = angular.element(document.getElementById(sourceId)).html();
             angular.element(document.getElementById(cloneId)).append(sourceHtml);
         }
+
+        $scope.consolElem = function() {
+            $scope.date = [{
+                name: $scope.name,
+                lastName: $scope.lastName,
+                gender: $scope.gender,
+                dateOfBirth: {
+                    day:$scope.day ,
+                    month:$scope.month ,
+                    year:$scope.year ,
+
+
+                },
+
+            }]
+
+            $scope.jsDate = angular.toJson($scope.date);
+            console.log($scope.year);
+            console.log($scope.jsDate);
+        }
+
+        $scope.getValue=function (x) {
+            $scope.x=angular.x.text();
+            console.log($scope.x);
+        }
+
     })
+

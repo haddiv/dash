@@ -95,7 +95,7 @@ angular
         }
       })
       .state('dashboard.form',{
-        templateUrl:'views/form.html',
+        templateUrl:'views/registe.html',
         url:'/form'
     })
         .state('dashboard.employees',{
@@ -153,7 +153,17 @@ angular
     })
       .state('dashboard.table',{
         templateUrl:'views/table.html',
-        url:'/table'
+        url:'/table',
+          controller: 'tableController',
+          resolve: {
+              loadMyFile:function($ocLazyLoad) {
+
+                  $ocLazyLoad.load({
+                      name:'sbAdminApp',
+                      files:['scripts/controllers/tableController.js']
+                  })
+              }
+          }
     })
       .state('dashboard.panels-wells',{
           templateUrl:'views/ui-elements/panels-wells.html',
