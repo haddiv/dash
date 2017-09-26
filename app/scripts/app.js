@@ -157,7 +157,7 @@ angular
 
 
             .state('dashboard.employees',{
-                templateUrl:'views/employees.html',
+                templateUrl:'views/employee/employees.html',
                 url:'/employees',
                 controller:'employeeController',
                 resolve: {
@@ -173,6 +173,10 @@ angular
                 }
             })
 
+            .state('dashboard.registration',{
+                templateUrl:'views/employee/employeeForm.html',
+                url:'/employeeForm.html'
+            })
 
 
 
