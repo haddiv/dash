@@ -1,30 +1,76 @@
 
 
+<div ng-controller="ctrlHomework">
 
 
-<div>
+    <div class="persinform col-md-4" >
 
-    <div>
-        <h1>Personal information</h1>
-    </div><br>
-    <div class="input-group  col-md-4">
-      <span class="input-group-addon " >First Name: </span>
-      <input type="text" class="form-control " placeholder="First Name" aria-describedby="sizing-addon2">
-    </div><br>
-    <div class="input-group col-md-4">
-        <span class="input-group-addon">Last Name: </span>
-        <input type="text" class="form-control" placeholder="Last Name" aria-describedby="sizing-addon2">
-    </div><br>
-    <div class="input-group col-md-4">
+        <div>
+            <h1>Personal information</h1>
+        </div><br>
+        <div class="input-group  ">
+            <span class="input-group-addon " >First Name: </span>
+            <input type="text" class="form-control " placeholder="first-name" ng-model="firstname" aria-describedby="sizing-addon2">
+        </div><br>
+        <div class="input-group ">
+            <span class="input-group-addon">Last Name: </span>
+            <input type="text" class="form-control" placeholder="last-name" ng-model="lastname" aria-describedby="sizing-addon2">
+        </div><br>
+        <div class="input-group ">
+            <span class="input-group-addon" >Age: </span>
+            <input type="number" class="form-control" placeholder="age" ng-model="age" aria-describedby="sizing-addon2">
+        </div><br>
+        <div class="input-group">
             <span class="input-group-addon" >Email: </span>
-            <input type="email" class="form-control" placeholder="Email" aria-describedby="sizing-addon2">
-    </div><br>
-    <div>
-        <div class="radio ">
-            <label><input type="radio" name="optradio">Boy</label>
-            <label><input type="radio" name="optradio">Girl</label>
-        </div>
+            <input type="text" class="form-control" placeholder="email" ng-model="email" aria-describedby="sizing-addon2">
+        </div><br>
+        <div class="input-group ">
+            <span class="input-group-addon">Adress: </span>
+            <input type="text" class="form-control" placeholder="adress" ng-model="adress" aria-describedby="sizing-addon2">
+        </div><br>
+        <div class="input-group">
+            <span class="input-group-addon">Telephone: </span>
+            <input type="number" class="form-control" placeholder="telephone" ng-model="telephone" aria-describedby="sizing-addon2">
+        </div><br>
+        <input type="submit" value="Save" ng-click="save()">
+
+
     </div>
 
-    
+    <div>
+
+        <table class="table col-md-7">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Email </th>
+                <th>Adress </th>
+                <th>Telephone </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in master">
+                <th>{{1+$index}}</th>
+                <td>{{x.firstname}}</td>
+                <td>{{x.lastname}}</td>
+                <td>{{x.age}}</td>
+                <td>{{x.email}}</td>
+                <td>{{x.adress}}</td>
+                <td>{{x.telephone}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
 </div>
+
+
+
+
+
+

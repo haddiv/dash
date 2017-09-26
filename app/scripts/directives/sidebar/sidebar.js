@@ -38,3 +38,58 @@ angular.module('sbAdminApp')
       }
     }
   }]);
+
+
+angular.module('sbAdminApp')
+    .controller("ctrlHomework",function($scope){
+
+
+      $scope.save = function(){
+          if($scope.firstname == '' || $scope.lastname == '' || $scope.age == null || $scope.email == '' || $scope.adress == '' || $scope.telephone == null){
+                $scope.master = [{}];
+             }else{
+                 $scope.master = [
+                  {
+                      firstname : $scope.firstname,
+                      lastname: $scope.lastname,
+                      age:$scope.age,
+                      email:$scope.email,
+                      adress:$scope.adress,
+                      telephone:$scope.telephone
+                  }
+                 ];
+             }      
+          };
+        $scope.save();
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
