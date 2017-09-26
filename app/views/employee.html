@@ -1,51 +1,51 @@
 
 <div ng-controller="ExampleController" class="container">
-    <form action="localhost:8080" method="Get" target="_blank" enctype="multipart/form-data" name="myForm" class="form-inline">
+    <form action="http://localhost:8080/create/" method="Get" target="_blank" enctype="multipart/form-data" name="myForm" class="form-inline">
         <label>
             first name:
-            <input type="text" class="form-control" name="userName" ng-model="user.name" required>
+            <input type="text" class="form-control" name="userName" ng-model="user.name">
         </label>
 
         <label>
             Last name:
-            <input type="text" class="form-control" name="lastName" ng-model="user.last" required>
+            <input type="text" class="form-control" name="lastName" ng-model="user.last">
         </label><br>
 
         <label>
             poto:<br>
-            <input type="file" class="form-control" name="poto" ng-model="user.poto" required>
+            <input type="file" class="form-control" name="poto" ng-model="user.poto">
         </label><br>
 
         <label>
             birthday:<br>
-            <input type="date" class="form-control" name="birthday" ng-model="user.birthday" placeholder="yyyy-MM-dd" required>
+            <input type="date" class="form-control" name="birthday" ng-model="user.birthday" placeholder="yyyy-MM-dd">
         </label><br>
 
         <label>
-            <input type="radio" ng-model="user.gender" value="male">
+            <input type="radio" name="gender" ng-model="user.gender" checked value="male">
             male
         </label><br/>
         <label>
-            <input type="radio" ng-model="user.gender" value="female">
+            <input type="radio" name="gender" ng-model="user.gender" value="female">
             female
         </label><br/>
         <label>
-            <input type="radio" ng-model="user.gender" value="other">
+            <input type="radio" name="gender" ng-model="user.gender" value="other">
             other
         </label><br>
         <label>
             e-mail:<br>
-            <input type="email" class="form-control" name="email" ng-model="user.email" required>
+            <input type="email" class="form-control" name="email" ng-model="user.email">
         </label><br>
 
         <label>
             Address:<br>
-            <input type="text" class="form-control" name="Address" ng-model="user.Address" required>
+            <input type="text" class="form-control" name="Address" ng-model="user.Address">
         </label>
 
         <label>
             Phone #:<br>
-            <input type="tex" class="form-control" name="phone" ng-model="user.phone" required>
+            <input type="tex" class="form-control" name="phone" ng-model="user.phone">
         </label><br>
 
         <label>
@@ -56,12 +56,12 @@
 
         <label>
             date of employment:<br>
-            <input type="date" class="form-control" name="date" ng-model="user.date" placeholder="yyyy-MM-dd" required>
+            <input type="date" class="form-control" name="date" ng-model="user.date" placeholder="yyyy-MM-dd">
         </label>
 
         <label>
             skils:<br>
-            <input type="text" class="form-control" name="skils" ng-model="user.skils" required>
+            <input type="text" class="form-control" name="skils" ng-model="user.skils">
         </label><br>
         <label>
             disgust:<br>
