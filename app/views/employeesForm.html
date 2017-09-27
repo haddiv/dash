@@ -1,157 +1,164 @@
-
-        <form action="localhost:8080/create" target="_blank" method="post"  enctype="multipart/form-data" id="empoyeeRegistration">
-            <fieldset>
-                <legend>Main Information </legend>
-                <div class="row margin">
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" ng-model="name" name="name" class="form-control" placeholder="name"> </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" ng-model="lastName" name="lastName" class="form-control" placeholder="Last name"></div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" ng-model="patronymic" name="patronymic" class="form-control" placeholder="patronymic"></div>
-                </div>
-                <div class="row margin">
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p> Gender </p>
-                            <label><input type="radio" ng-model="gender" name="gender" value="male"  ng-checked="checked" > Male </label>
-                            <label><input type="radio" ng-model="gender" name="gender" value="female"> female</label>
-                            <label><input type="radio" ng-model="gender" name="gender" value="other"> other</label>
-                    </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                            <p> Birthday </p>
-                        <select class="form-control selectBoxDayStyle">
-                            <option  ng-repeat="day in days" ng-model="day" ng-click="getValue($even.target)">{{day}}</option>
-                        </select>
-                        <select class="form-control selectBoxMonthStyle">
-                            <option ng-repeat="month in months" ng-model="month">{{ month }}</option>
-                        </select>
-                        <select class="form-control selectBoxStyle">
-                            <option ng-repeat="year in years" ng-model="year">{{ year }}</option>
-                        </select>
-                    </div>
-
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p> When have started to work </p>
-                        <select class="form-control selectBoxDayStyle">
-                            <option ng-repeat="day in days">{{day}}</option>
-                        </select>
-                        <select class="form-control selectBoxMonthStyle">
-                            <option ng-repeat="month in months">{{ month }}</option>
-                        </select>
-                        <select class="form-control selectBoxStyle" >
-                            <option ng-repeat="year in years">{{ year }}</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row margin">
-                    <div class="col-sm-1 col-xs-6 col-lg-6 col-md-6">
-                        <select  class="form-control">
-                            <option ng-repeat="department in departments"> {{department}}</option>
-
-                        </select>
-                    </div>
-                    <div class="col-sm-1 col-xs-6 col-lg-6 col-md-6" >
-                        <select  class="form-control">
-                            <option ng-repeat="possition in possitions"> {{possition}}</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row margin">
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p> Salary </p>
-                        <input type="number" class="form-control">
-                    </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <div class="uploadPhotoDiv">
-                        </div>
-
-                    </div>
-                </div>
-            </fieldset>
-            <div class="row margin">
-                <fieldset>
-                    <legend> Contact </legend>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="phoneNumber" class="form-control" placeholder="Phone number"> </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="email" class="form-control" placeholder="e-mail"></div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="address" class="form-control" placeholder="Address"></div>
-                </fieldset>
+<form action="http://localhost:8080/create" target="_blank" method="get" enctype="multipart/form-data"
+      id="empoyeeRegistration">
+    <fieldset>
+        <legend>Main Information</legend>
+        <div class="row margin">
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" ng-model="name" name="name"
+                                                                    class="form-control" placeholder="name"></div>
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" ng-model="lastName" name="lastName"
+                                                                    class="form-control" placeholder="Last name"></div>
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" ng-model="patronymic" name="patronymic"
+                                                                    class="form-control" placeholder="patronymic"></div>
+        </div>
+        <div class="row margin">
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                <p> Gender </p>
+                <label><input type="radio" ng-model="gender" name="gender" value="male" ng-checked="checked"> Male
+                </label>
+                <label><input type="radio" ng-model="gender" name="gender" value="female"> female</label>
+                <label><input type="radio" ng-model="gender" name="gender" value="other"> other</label>
             </div>
-            <div class="row margin">
-                <fieldset>
-                    <legend>Education, experience and skills :</legend>
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                <p> Birthday </p>
+                <select class="form-control selectBoxDayStyle">
+                    <option ng-repeat="day in days" ng-model="day" ng-click="getValue($even.target)">{{day}}</option>
+                </select>
+                <select class="form-control selectBoxMonthStyle">
+                    <option ng-repeat="month in months" ng-model="month">{{ month }}</option>
+                </select>
+                <select class="form-control selectBoxStyle">
+                    <option ng-repeat="year in years" ng-model="year">{{ year }}</option>
+                </select>
+            </div>
 
-                    <div id="mainDiv">
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p> Name of the institution </p>
-                        <textarea class="form-control"> </textarea>
-                    </div>
-                        <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                            <p> Speciality: </p>
-                            <textarea class="form-control "> </textarea>
-                        </div>
-                        <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                                <p>Studied from -- to: </p>
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                <p> When have started to work </p>
+                <select class="form-control selectBoxDayStyle">
+                    <option ng-repeat="day in days">{{day}}</option>
+                </select>
+                <select class="form-control selectBoxMonthStyle">
+                    <option ng-repeat="month in months">{{ month }}</option>
+                </select>
+                <select class="form-control selectBoxStyle">
+                    <option ng-repeat="year in years">{{ year }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row margin">
+            <div class="col-sm-1 col-xs-6 col-lg-6 col-md-6">
+                <select class="form-control">
+                    <option ng-repeat="department in departments"> {{department}}</option>
 
-                                <select class="form-control selectBoxStyle marginRight">
-                                    <option> -- </option>
-                                    <option ng-repeat="year in years">{{ year }}</option>
-                                </select>
-                                <select  class="form-control selectBoxStyle">
-                                    <option> -- </option>
-                                    <option ng-repeat="year in years">{{ year }}</option>
-                                </select>
-                        </div>
-                    </div>
-                    <div class="clear"> </div>
-                    <div class="clear" id="cloneDiv"> </div>
-                </fieldset>
-                    </div>
-                    <div class="row margin">
-                    <div class="submitButtonClass">
-                        <a class="btn btn-primary" ng-click="clickToClone('mainDiv', 'cloneDiv')"> +  </a>
-                    </div>
-                    <div class="clear"> </div>
-
+                </select>
+            </div>
+            <div class="col-sm-1 col-xs-6 col-lg-6 col-md-6">
+                <select class="form-control">
+                    <option ng-repeat="possition in possitions"> {{possition}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row margin">
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                <p> Salary </p>
+                <input type="number" class="form-control">
+            </div>
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                <div class="uploadPhotoDiv">
+                </div>
 
             </div>
-            <div class="row margin">
+        </div>
+    </fieldset>
+    <div class="row margin">
+        <fieldset>
+            <legend> Contact</legend>
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="phoneNumber" class="form-control"
+                                                                    placeholder="Phone number"></div>
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="email" class="form-control"
+                                                                    placeholder="e-mail"></div>
+            <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4"><input type="text" name="address" class="form-control"
+                                                                    placeholder="Address"></div>
+        </fieldset>
+    </div>
+    <div class="row margin">
+        <fieldset>
+            <legend>Education, experience and skills :</legend>
 
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p> Organization </p>
-                        <textarea class="form-control"> </textarea>
-                    </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p> Speciality: </p>
-                        <textarea class="form-control "> </textarea>
-                    </div>
-                    <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
-                        <p>Worked from -- to: </p>
-
-                        <select class="form-control selectBoxStyle marginRight">
-                            <option> -- </option>
-                            <option ng-repeat="year in years">{{ year }}</option>
-                        </select>
-                        <select  class="form-control selectBoxStyle">
-                            <option> -- </option>
-                            <option ng-repeat="year in years">{{ year }}</option>
-                        </select>
-                    </div>
-                    <div class="submitButtonClass">
-                        <input type="button" value="+" class="btn btn-primary">
-                    </div>
-
-
-            </div>
-            <div class="row">
-
-                <p> Skills: </p>
-                <textarea class="form-control"> </textarea>
-            </div>
-            <div class="row margin">
-                <fieldset>
-                    <legend> Additional information</legend>
-                    <p> Characteristic </p>
+            <div id="mainDiv">
+                <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                    <p> Name of the institution </p>
                     <textarea class="form-control"> </textarea>
-                </fieldset>
+                </div>
+                <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                    <p> Speciality: </p>
+                    <textarea class="form-control "> </textarea>
+                </div>
+                <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+                    <p>Studied from -- to: </p>
+
+                    <select class="form-control selectBoxStyle marginRight">
+                        <option> --</option>
+                        <option ng-repeat="year in years">{{ year }}</option>
+                    </select>
+                    <select class="form-control selectBoxStyle">
+                        <option> --</option>
+                        <option ng-repeat="year in years">{{ year }}</option>
+                    </select>
+                </div>
             </div>
-            <div class="submitButtonClass">
-                <input type="submit" value="Create" class="btn btn-primary" >
-            </div>
-        </form>
+            <div class="clear"></div>
+            <div class="clear" id="cloneDiv"></div>
+        </fieldset>
+    </div>
+    <div class="row margin">
+        <div class="submitButtonClass">
+            <a class="btn btn-primary" ng-click="clickToClone('mainDiv', 'cloneDiv')"> + </a>
+        </div>
+        <div class="clear"></div>
+
+
+    </div>
+    <div class="row margin">
+
+        <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+            <p> Organization </p>
+            <textarea class="form-control"> </textarea>
+        </div>
+        <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+            <p> Speciality: </p>
+            <textarea class="form-control "> </textarea>
+        </div>
+        <div class="col-sm-1 col-xs-4 col-lg-4 col-md-4">
+            <p>Worked from -- to: </p>
+
+            <select class="form-control selectBoxStyle marginRight">
+                <option> --</option>
+                <option ng-repeat="year in years">{{ year }}</option>
+            </select>
+            <select class="form-control selectBoxStyle">
+                <option> --</option>
+                <option ng-repeat="year in years">{{ year }}</option>
+            </select>
+        </div>
+        <div class="submitButtonClass">
+            <input type="button" value="+" class="btn btn-primary">
+        </div>
+
+
+    </div>
+    <div class="row">
+
+        <p> Skills: </p>
+        <textarea class="form-control"> </textarea>
+    </div>
+    <div class="row margin">
+        <fieldset>
+            <legend> Additional information</legend>
+            <p> Characteristic </p>
+            <textarea class="form-control"> </textarea>
+        </fieldset>
+    </div>
+    <div class="submitButtonClass">
+        <input type="submit" value="Create" class="btn btn-primary">
+    </div>
+</form>
