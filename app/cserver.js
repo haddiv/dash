@@ -3,6 +3,7 @@ var url = require('url');
 var fs = require('fs');
 
 http.createServer(function (req, res) {
+    console.log('Server is running');
     var q = url.parse(req.url, true);
 
     console.log(q.pathname);
