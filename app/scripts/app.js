@@ -155,7 +155,7 @@ angular
             })
             .state('dashboard.employee', {
                 url: '/employee',
-                templateUrl: 'views/employee.html',
+                templateUrl: 'views/employee.html'
 
             })
     }]);

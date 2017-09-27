@@ -41,21 +41,21 @@
 <!-- BEGIN # MODAL LOGIN -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
      style="display: none;">
-    <div class="modal-dialog">
+    <div class="modal-dialog" ng-controller="EmployeeCtrl">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title">New Employee</h1>
             </div>
-            <div class="modal-body">
-                <button type="button" class="btn btn-primary btn1" data-toggle="collapse" data-target="#pi">Personal
-                    Information
-                </button>
-                <div id="pi" class="collapse view">
-                    <form action="">
+            <form action="http://localhost:8080/create/" target="_blank" method="Get" name="mainForm" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <button type="button" class="btn btn-primary btn1" data-toggle="collapse" data-target="#pi">Personal
+                        Information
+                    </button>
+                    <div id="pi" class="collapse view">
                         <div class="form-group col-md-6">
                             <div class="icon1">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <input placeholder="First Name" name="f_name" type="text" ng-model="f_name"
+                                <input placeholder="First Name" name="f_name" type="text" ng-model="employee.name"
                                        ng-minlength="3"
                                        ng-maxlength="15" required title="Please enter 3 characters or more.">
                             </div>
@@ -63,7 +63,7 @@
                         <div class="form-group col-md-6">
                             <div class="icon1">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <input placeholder="Last Name" name="l_name" type="text" ng-model="l_name"
+                                <input placeholder="Last Name" name="l_name" type="text" ng-model="employee.surname"
                                        ng-minlength="3"
                                        ng-maxlength="20" required title="Please enter 3 characters or more.">
                             </div>
@@ -71,7 +71,7 @@
                         <div class="form-group col-md-6">
                             <div class="icon1">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                <input placeholder="Phone Number" name="tel" type="tel" ng-model="tel" ng-minlength="9"
+                                <input placeholder="Phone Number" name="tel" type="tel" ng-model="employee.tel" ng-minlength="9"
                                        ng-maxlength="9" required>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                             <div class="icon1">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <input placeholder="Email" name="email" type="email" title="Please enter a valid email"
-                                       ng-model="email"
+                                       ng-model="employee.email"
                                        required>
                             </div>
                         </div>
@@ -110,19 +110,21 @@
                         <div class="form-group col-md-12">
                             <div class="icon1">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input placeholder="Street Address" name="address" type="text" ng-model="address" required>
+                                <input placeholder="Street Address" name="address" type="text" ng-model="employee.address"
+                                       required>
                             </div>
                         </div>
                         <div class="form-group col-md-12">
                             <div class="icon1">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input placeholder="Address Line 2" name="address" type="text" ng-model="address" required>
+                                <input placeholder="Address Line 2" name="address" type="text" ng-model="employee.address2"
+                                       required>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
                             <div class="icon1">
                                 <i class="fa fa-building-o" aria-hidden="true"></i>
-                                <input placeholder="City" name="city" type="text" ng-model="city" required>
+                                <input placeholder="City" name="city" type="text" ng-model="employee.city" required>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -142,32 +144,32 @@
                             </select>
                         </div>
 
-                    </form>
-                    <span class="any">any</span>
-                </div>
-                <button type="button" class="btn btn-primary btn1" data-toggle="collapse" data-target="#ed">Education
-                </button>
-                <div id="ed" class="collapse view">
-                    <form action="">
+
+                        <span class="any">any</span>
+                    </div>
+                    <button type="button" class="btn btn-primary btn1" data-toggle="collapse" data-target="#ed">
+                        Education
+                    </button>
+                    <div id="ed" class="collapse view">
                         <div class="form-group col-md-6">
                             <div class="icon1">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <input placeholder="University/College" name="" type="text" ng-model="f_name"
-                                       required >
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <input placeholder="University/College" name="" type="text" ng-model="employee.col"
+                                       required>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
                             <div class="icon1">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <input placeholder="Degree" name="" type="text" ng-model="f_name"
-                                       required >
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <input placeholder="Degree" name="" type="text" ng-model="employee.degree"
+                                       required>
                             </div>
                         </div>
                         <div class="form-group col-md-12">
                             <div class="icon1">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input placeholder="Location" name="" type="text" ng-model="f_name"
-                                       required >
+                                <input placeholder="Location" name="" type="text" ng-model="employee.location"
+                                       required>
                             </div>
                         </div>
 
@@ -187,11 +189,68 @@
                             </div>
                         </div>
 
+                        <span class="any">any</span>
+                    </div>
 
-                    </form>
-                    <span class="any">any</span>
+                    <button type="button" class="btn btn-primary btn1" data-toggle="collapse" data-target="#we">
+                        Work experience
+                    </button>
+                    <div id="we" class="collapse view">
+                        <div class="form-group col-md-6">
+                            <div class="icon1">
+                                <i class="fa fa-building-o" aria-hidden="true"></i>
+                                <input placeholder="Company name" name="" type="text" ng-model="employee.c_name"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="icon1">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                <input placeholder="Job title" name="" type="text" ng-model="employee.job"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="icon1">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input placeholder="Location" name="" type="text" ng-model="employee.loc"
+                                       required>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-5">
+                            <div class="icon1">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+
+                            </div>
+                        </div>
+                        <div class="form-group col-md-1 to">
+                            to
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="icon1">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <textarea name="" class="col-md-12" rows="3" placeholder="Job Responsibilities"></textarea>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <textarea name="" class="col-md-12" rows="3" placeholder="Job Achievements"></textarea>
+                        </div>
+
+                        <span class="any">any</span>
+                    </div>
+
+
                 </div>
-            </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Submit" class="btn btn-primary" ng-click="send(employee)">
+                </div>
+                <!--<pre>master = {{master | json}}</pre>-->
+
+            </form>
         </div>
     </div>
 </div>
