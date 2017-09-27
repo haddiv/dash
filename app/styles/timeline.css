@@ -178,3 +178,11 @@
         border-left-width: 0;
     }
 }
+.span3 {
+    width: 80%;
+}
+
+.radio {
+    margin-left: 2% !important;
+    display: inline-block;
+}

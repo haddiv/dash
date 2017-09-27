@@ -38,3 +38,10 @@ angular.module('sbAdminApp')
       }
     }
   }]);
+angular.module('sbAdminApp')
+.controller("form_ctrl", function ($scope) {
+    $scope.data={};
+    $scope.value = function(x) {
+      console.log(x);
+    };
+});
