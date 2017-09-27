@@ -7,6 +7,7 @@ function getYear (startYear) {
     }
     return years;
 }
+
 var YearArr = getYear();
 console.log(YearArr);
 
@@ -48,6 +49,10 @@ angular.module('sbAdminApp')
         $scope.getValue=function (x) {
             $scope.x=angular.x.text();
             console.log($scope.x);
+        }
+
+        $scope.updateF=function () {
+            console.log("Apri Gogin :D");
         }
 
     })

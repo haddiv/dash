@@ -3,11 +3,12 @@ var url = require('url');
 var fs = require('fs');
 //create a server object:
 http.createServer(function (req, res) {
-    console.log('datas')
-
     var q = url.parse(req.url, true);
+    console.log(q);
+    //console.log("q" + q);
+    //console.log(url);
     var datas = q.query;
-    console.log(datas)
+    //console.log(datas)
     if (q.pathname == "/create") {
         // console.log(req.url)
         fs.readFile('../data/employees.json', 'utf8', function (err, data) {

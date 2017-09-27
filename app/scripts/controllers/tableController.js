@@ -29,7 +29,8 @@ angular.module('sbAdminApp')
             console.log(xml);
             return xml;
         }
-        }
+        },
+
 
 
 
