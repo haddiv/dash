@@ -1,14 +1,1 @@
-[
-  {},
-  {},
-  {
-    "name": "fgdfgdf",
-    "lastName": "fsdf",
-    "patronymic": "dfsdfsd",
-    "gender": "female",
-    "phoneNumber": "gvdg",
-    "email": "gdd",
-    "address": "gdsd"
-  },
-  {}
-]
+[{},{},{"name":"fgdfgdf","lastName":"fsdf","patronymic":"dfsdfsd","gender":"female","phoneNumber":"gvdg","email":"gdd","address":"gdsd"},{},{"name":"Asti","lastName":"Sargsyan","patronymic":"Gagik","gender":"female","phoneNumber":"","email":"","address":""},{"name":"fgdfgdf","lastName":"fsdf","patronymic":"dfsdfsd","gender":"female","phoneNumber":"gvdg","email":"gdd","address":"gdsd"},{},{},{},{},{"name":"Asti","lastName":"Sargsyan","patronymic":"Gagik","gender":"female","phoneNumber":"","email":"","address":""}]
