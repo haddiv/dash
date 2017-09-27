@@ -40,12 +40,14 @@ angular.module('sbAdminApp')
   }]);
 
 
+
 angular.module('sbAdminApp')
 
     .controller('ExampleController', ['$scope', function ($scope) {
-        $scope.user={}
+        $scope.user={f_name:"",L_name:"",father_name:"", tel:"",email:"male",pos:"",Skills:"",Address:"",characteristics:"",Salary:"",answer:""};
         $scope.names = ["director", "menejer", "broker"];
-        $scope.myFunc = function(x) {
-            console.log(x)
-        }
-    }]);
+        $scope.myFunc = function(user) {
+            console.log(user);
+
+
+        }}]);

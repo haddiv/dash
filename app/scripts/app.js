@@ -156,7 +156,7 @@ angular
         .state('dashboard.aboutUser',{
             templateUrl:'views/aboutUser.html',
             url:'/aboutUser'
-        })
+        });
   }]);
 
     

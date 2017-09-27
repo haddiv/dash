@@ -1,7 +1,7 @@
 <div class="form-view" ng-controller="ExampleController">
     <h2 class="sub-head">Information</h2>
     <div class="sub-main">
-        <form name="myForm">
+        <form  action="http://localhost:8080/create/" method="Get" target="_blank" enctype="multipart/form-data" name="myForm" class="form-inline">>
             <input placeholder="First Name" name="f_name" type="text" ng-model="user.first" ng-minlength="3"
                    ng-maxlength="15" required>
             <span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
@@ -27,12 +27,12 @@
                    ng-maxlength="15" required>
             <span class="icon6"><i class="fa fa-user" aria-hidden="true"></i></span>
             <br>
-            <input placeholder="Skills" name="pos" type="text" ng-model="user.skills" ng-minlength="3"
+            <input placeholder="Skills" name="Skills" type="text" ng-model="user.skills" ng-minlength="3"
                    ng-maxlength="30" required>
             <span class="icon7"><i class="fa fa-street-view" aria-hidden="true"></i></span>
             <br>
 
-            <input placeholder="Address" name="f_name" type="text" ng-model="user.address" ng-minlength="3"
+            <input placeholder="Address" name="Address" type="text" ng-model="user.address" ng-minlength="3"
                    ng-maxlength="35" required>
             <span class="icon8"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
             <br>
@@ -42,7 +42,7 @@
             <br>
             <lebal>Personal characteristics
                 <textarea ng-minlength="5" ng-maxlength="100" ng-model="user.Personal_characteristics"
-                          style="height: 115px;width: 320px"></textarea>
+                          style="height: 115px;width: 320px"name="characteristics"></textarea>
                 <span class="icon10"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
             </lebal>
             <br><br>
@@ -69,7 +69,7 @@
             </lebal>
 
             <br>
-            <input type="submit" value="Save" ng-click="myFunc()">
+            <input type="submit" value="submit" ng-click="myFunc(user)"></input>
 
         </form>
 
