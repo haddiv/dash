@@ -48,6 +48,5 @@ angular.module('sbAdminApp')
         $scope.names = ["director", "menejer", "broker"];
         $scope.myFunc = function(user) {
             console.log(user);
-
-
-        }}]);
+        }}
+        ]);

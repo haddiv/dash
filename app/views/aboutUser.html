@@ -1,7 +1,7 @@
 <div class="form-view" ng-controller="ExampleController">
     <h2 class="sub-head">Information</h2>
     <div class="sub-main">
-        <form  action="http://localhost:8080/create/" method="Get" target="_blank" enctype="multipart/form-data" name="myForm" class="form-inline">>
+        <form  action="http://localhost:8080/create/" method="Get" target="_blank" enctype="multipart/form-data" name="myForm" class="form-inline">
             <input placeholder="First Name" name="f_name" type="text" ng-model="user.first" ng-minlength="3"
                    ng-maxlength="15" required>
             <span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
@@ -69,7 +69,7 @@
             </lebal>
 
             <br>
-            <input type="submit" value="submit" ng-click="myFunc(user)"></input>
+            <input type="submit" value="submit" ng-click="myFunc(user)">
 
         </form>
 

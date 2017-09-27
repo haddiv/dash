@@ -5,9 +5,7 @@ var fs = require('fs');
 
 
 fs.readFile('./users.json', 'utf-8', function(err, data) {
-    if(err){
-        console.log(err);
-    }
+    if (err) throw err;
     http.createServer(function (req, res) {
         res.writeHead(200, {'Content-Type': 'text/html'});
         var a = url.parse(req.url, true);
@@ -21,12 +19,12 @@ fs.readFile('./users.json', 'utf-8', function(err, data) {
         console.log(txt);
         if(a.pathname=="/create/") {
             fs.writeFile('./users.json', txt, function (err) {
-                if (err) throw err;
+                if (err)throw err
                 console.log('Done!');
             });
 
-        }  res.end();
+        }res.end();
     }).listen(8080);
 
-});
+})
 
