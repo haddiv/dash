@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"ng-app="myApp" >
+<html lang="en"ng-app="formApp" >
 <head>
     <meta charset="UTF-8">
     <title>Employee Form</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 <body >
-<div class="container"  ng-controller​="appController">
+<div class="container"  ng-controller​="formCtrl as ctrl">
 
-    <form class="well form-horizontal" action="https://localhost:8080/create" method="post"   enctype="multipart/form-data" id="reg_form">
+    <form class="well form-horizontal" action="https://localhost:8080/create" target="blank" method="post"   enctype="multipart/form-data" id="reg_form">
         <fieldset>
 
 
@@ -152,7 +152,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label"></label>
                 <div class="col-md-4">
-                    <button type="submit" class="btn btn-warning" >Add <span class="glyphicon glyphicon-send"></span></button>
+                    <button type="submit" class="btn btn-warning" ng-click="ctrl.add()">Add <span class="glyphicon glyphicon-send"></span></button>
                 </div>
             </div>
 
@@ -160,5 +160,17 @@
     </form>
 </div>
 </div>
+<script>
+        angular.module('formApp'..[]) ;
+        .controller('formCtrl',[function(){
+
+            var e=this;
+            e.add=function()  {
+                console.log('submitted',e.user)  ;
+            }  ;
+        }])
+
+
+</script>
 </body>
 </html>
