@@ -1,16 +1,4 @@
 [
-  {},
-  {},
-  {
-    "name": "fgdfgdf",
-    "lastName": "fsdf",
-    "patronymic": "dfsdfsd",
-    "gender": "female",
-    "phoneNumber": "gvdg",
-    "email": "gdd",
-    "address": "gdsd"
-  },
-  {},
   {
     "name": "Asti",
     "lastName": "Sargsyan",
@@ -29,10 +17,6 @@
     "email": "gdd",
     "address": "gdsd"
   },
-  {},
-  {},
-  {},
-  {},
   {
     "name": "Asti",
     "lastName": "Sargsyan",
@@ -59,22 +43,30 @@
     "email": "",
     "address": ""
   },
-  {},
-  {},
   {
-    "name": "Gohar",
-    "lastName": "Hovhannisyan",
+    "name": "Asti",
+    "lastName": "Sargsyan",
     "patronymic": "",
     "phoneNumber": "",
     "email": "",
     "address": ""
   },
   {
-    "name": "sdfsdf",
-    "lastName": "fsdf",
-    "patronymic": "c",
+    "name": "Asti",
+    "lastName": "Sargsyan",
+    "patronymic": "",
     "phoneNumber": "",
     "email": "",
     "address": ""
-  }
+  },
+  {
+    "name": "Gogi",
+    "lastName": "Hovhannisyan",
+    "patronymic": "",
+    "phoneNumber": "",
+    "email": "",
+    "address": ""
+  },
+  "[\r\n  {\r\n    \"name\": \"Asti\",\r\n    \"lastName\": \"Sargsyan\",\r\n    \"patronymic\": \"Gagik\",\r\n    \"gender\": \"female\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"fgdfgdf\",\r\n    \"lastName\": \"fsdf\",\r\n    \"patronymic\": \"dfsdfsd\",\r\n    \"gender\": \"female\",\r\n    \"phoneNumber\": \"gvdg\",\r\n    \"email\": \"gdd\",\r\n    \"address\": \"gdsd\"\r\n  },\r\n  {\r\n    \"name\": \"Asti\",\r\n    \"lastName\": \"Sargsyan\",\r\n    \"patronymic\": \"Gagik\",\r\n    \"gender\": \"female\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"Gohar\",\r\n    \"lastName\": \"Hovhannisyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {},\r\n  {\r\n    \"name\": \"Gohar\",\r\n    \"lastName\": \"Hovhannisyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"Asti\",\r\n    \"lastName\": \"Sargsyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"Asti\",\r\n    \"lastName\": \"Sargsyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"Gogi\",\r\n    \"lastName\": \"Hovhannisyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  }\r\n]",
+  "[\r\n  {\r\n    \"name\": \"Asti\",\r\n    \"lastName\": \"Sargsyan\",\r\n    \"patronymic\": \"Gagik\",\r\n    \"gender\": \"female\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"fgdfgdf\",\r\n    \"lastName\": \"fsdf\",\r\n    \"patronymic\": \"dfsdfsd\",\r\n    \"gender\": \"female\",\r\n    \"phoneNumber\": \"gvdg\",\r\n    \"email\": \"gdd\",\r\n    \"address\": \"gdsd\"\r\n  },\r\n  {\r\n    \"name\": \"Asti\",\r\n    \"lastName\": \"Sargsyan\",\r\n    \"patronymic\": \"Gagik\",\r\n    \"gender\": \"female\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"Gohar\",\r\n    \"lastName\": \"Hovhannisyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {},\r\n  {\r\n    \"name\": \"Gohar\",\r\n    \"lastName\": \"Hovhannisyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"Asti\",\r\n    \"lastName\": \"Sargsyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"Asti\",\r\n    \"lastName\": \"Sargsyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  {\r\n    \"name\": \"Gogi\",\r\n    \"lastName\": \"Hovhannisyan\",\r\n    \"patronymic\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"address\": \"\"\r\n  },\r\n  \"[\\r\\n  {\\r\\n    \\\"name\\\": \\\"Asti\\\",\\r\\n    \\\"lastName\\\": \\\"Sargsyan\\\",\\r\\n    \\\"patronymic\\\": \\\"Gagik\\\",\\r\\n    \\\"gender\\\": \\\"female\\\",\\r\\n    \\\"phoneNumber\\\": \\\"\\\",\\r\\n    \\\"email\\\": \\\"\\\",\\r\\n    \\\"address\\\": \\\"\\\"\\r\\n  },\\r\\n  {\\r\\n    \\\"name\\\": \\\"fgdfgdf\\\",\\r\\n    \\\"lastName\\\": \\\"fsdf\\\",\\r\\n    \\\"patronymic\\\": \\\"dfsdfsd\\\",\\r\\n    \\\"gender\\\": \\\"female\\\",\\r\\n    \\\"phoneNumber\\\": \\\"gvdg\\\",\\r\\n    \\\"email\\\": \\\"gdd\\\",\\r\\n    \\\"address\\\": \\\"gdsd\\\"\\r\\n  },\\r\\n  {\\r\\n    \\\"name\\\": \\\"Asti\\\",\\r\\n    \\\"lastName\\\": \\\"Sargsyan\\\",\\r\\n    \\\"patronymic\\\": \\\"Gagik\\\",\\r\\n    \\\"gender\\\": \\\"female\\\",\\r\\n    \\\"phoneNumber\\\": \\\"\\\",\\r\\n    \\\"email\\\": \\\"\\\",\\r\\n    \\\"address\\\": \\\"\\\"\\r\\n  },\\r\\n  {\\r\\n    \\\"name\\\": \\\"Gohar\\\",\\r\\n    \\\"lastName\\\": \\\"Hovhannisyan\\\",\\r\\n    \\\"patronymic\\\": \\\"\\\",\\r\\n    \\\"phoneNumber\\\": \\\"\\\",\\r\\n    \\\"email\\\": \\\"\\\",\\r\\n    \\\"address\\\": \\\"\\\"\\r\\n  },\\r\\n  {},\\r\\n  {\\r\\n    \\\"name\\\": \\\"Gohar\\\",\\r\\n    \\\"lastName\\\": \\\"Hovhannisyan\\\",\\r\\n    \\\"patronymic\\\": \\\"\\\",\\r\\n    \\\"phoneNumber\\\": \\\"\\\",\\r\\n    \\\"email\\\": \\\"\\\",\\r\\n    \\\"address\\\": \\\"\\\"\\r\\n  },\\r\\n  {\\r\\n    \\\"name\\\": \\\"Asti\\\",\\r\\n    \\\"lastName\\\": \\\"Sargsyan\\\",\\r\\n    \\\"patronymic\\\": \\\"\\\",\\r\\n    \\\"phoneNumber\\\": \\\"\\\",\\r\\n    \\\"email\\\": \\\"\\\",\\r\\n    \\\"address\\\": \\\"\\\"\\r\\n  },\\r\\n  {\\r\\n    \\\"name\\\": \\\"Asti\\\",\\r\\n    \\\"lastName\\\": \\\"Sargsyan\\\",\\r\\n    \\\"patronymic\\\": \\\"\\\",\\r\\n    \\\"phoneNumber\\\": \\\"\\\",\\r\\n    \\\"email\\\": \\\"\\\",\\r\\n    \\\"address\\\": \\\"\\\"\\r\\n  },\\r\\n  {\\r\\n    \\\"name\\\": \\\"Gogi\\\",\\r\\n    \\\"lastName\\\": \\\"Hovhannisyan\\\",\\r\\n    \\\"patronymic\\\": \\\"\\\",\\r\\n    \\\"phoneNumber\\\": \\\"\\\",\\r\\n    \\\"email\\\": \\\"\\\",\\r\\n    \\\"address\\\": \\\"\\\"\\r\\n  }\\r\\n]\"\r\n]"
 ]
