@@ -2,28 +2,39 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 
+http.createServer(function (req, res) {
+    var q = url.parse(req.url, true);
+    console.log(q.pathname);
 
-fs.readFile('../data/employees.json', 'utf-8', function (err, data) {
-    if (err) throw err;
-    http.createServer(function (req, res) {
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        var a = url.parse(req.url, true);
-        var q = url.parse(req.url, true).query;
-        // console.log(q);
+    var n_data = q.query;
 
-        var arrayOfObjects = JSON.parse(data);
+    if (q.pathname == "/create/") {
+        console.log("done!");
+        fs.exists('../data/employees.json', function (exists) {
+            if (exists) {
+                console.log("yes file exists");
+                fs.readFile('../data/employees.json', 'utf8', function (err, data) {
+                    if (err) {
+                        return console.log(err);
+                    }
+                    console.log(data);
+                    var jsonArray = [];
 
-        arrayOfObjects.users.push(q);
-        var txt = JSON.stringify(arrayOfObjects);
-        console.log(txt);
-        if (a.pathname == "/create/") {
-            fs.writeFile('../data/employees.json', txt, function (err) {
-                if (err) throw err;
-                console.log('Done!')
-            });
+                    jsonArray.push(n_data);
+                    var employee_json = JSON.stringify(jsonArray);
+                    //fs.writeFile('../data/employees.json', employee_json);
+                    console.log(employee_json);
 
-        }
-        res.end();
-    }).listen(8080);
+                    fs.appendFile('../data/employees.json', employee_json, function (err) {
+                        if (err) throw err;
+                        console.log('Updated!');
+                    });
 
-})
+                });
+
+            } else {
+                console.log("file not exists");
+            }
+        });
+    }
+}).listen(8080);

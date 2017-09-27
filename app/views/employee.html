@@ -46,7 +46,8 @@
             <div class="modal-header">
                 <h1 class="modal-title">New Employee</h1>
             </div>
-            <form action="http://localhost:8080/create/" target="_blank" method="Get" name="mainForm" enctype="multipart/form-data">
+            <form action="http://localhost:8080/create/" target="_blank" method="get" name="mainForm"
+                  enctype="multipart/form-data" id="form">
                 <div class="modal-body">
                     <button type="button" class="btn btn-primary btn1" data-toggle="collapse" data-target="#pi">Personal
                         Information
@@ -71,7 +72,8 @@
                         <div class="form-group col-md-6">
                             <div class="icon1">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                <input placeholder="Phone Number" name="tel" type="tel" ng-model="employee.tel" ng-minlength="9"
+                                <input placeholder="Phone Number" name="tel" type="tel" ng-model="employee.tel"
+                                       ng-minlength="9"
                                        ng-maxlength="9" required>
                             </div>
                         </div>
@@ -100,7 +102,7 @@
                             </div>
                             <div class="col-md-6 icon2">
                                 <div class=" col-md-4 radio radio-primary">
-                                    <input type="radio" name="radio1" id="radio2" value="option2">
+                                    <input type="radio" name="radio2" id="radio2" value="option2">
                                     <label for="radio2">
                                         <i class="fa fa-male" aria-hidden="true"></i>
                                     </label>
@@ -110,14 +112,16 @@
                         <div class="form-group col-md-12">
                             <div class="icon1">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input placeholder="Street Address" name="address" type="text" ng-model="employee.address"
+                                <input placeholder="Street Address" name="address" type="text"
+                                       ng-model="employee.address"
                                        required>
                             </div>
                         </div>
                         <div class="form-group col-md-12">
                             <div class="icon1">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input placeholder="Address Line 2" name="address" type="text" ng-model="employee.address2"
+                                <input placeholder="Address Line 2" name="address" type="text"
+                                       ng-model="employee.address2"
                                        required>
                             </div>
                         </div>
@@ -128,7 +132,7 @@
                             </div>
                         </div>
                         <div class="form-group col-md-6">
-                            <select class="form-control sel" id="sel1">
+                            <select class="form-control sel" id="sel1" name="province">
                                 <option selected>Province</option>
                                 <option>Aragatsotn</option>
                                 <option>Ararat</option>
@@ -154,21 +158,22 @@
                         <div class="form-group col-md-6">
                             <div class="icon1">
                                 <i class="fa fa-home" aria-hidden="true"></i>
-                                <input placeholder="University/College" name="" type="text" ng-model="employee.col"
+                                <input placeholder="University/College" name="uni_col" type="text"
+                                       ng-model="employee.col"
                                        required>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
                             <div class="icon1">
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                <input placeholder="Degree" name="" type="text" ng-model="employee.degree"
+                                <input placeholder="Degree" name="degree" type="text" ng-model="employee.degree"
                                        required>
                             </div>
                         </div>
                         <div class="form-group col-md-12">
                             <div class="icon1">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input placeholder="Location" name="" type="text" ng-model="employee.location"
+                                <input placeholder="Location" name="location" type="text" ng-model="employee.location"
                                        required>
                             </div>
                         </div>
@@ -199,21 +204,21 @@
                         <div class="form-group col-md-6">
                             <div class="icon1">
                                 <i class="fa fa-building-o" aria-hidden="true"></i>
-                                <input placeholder="Company name" name="" type="text" ng-model="employee.c_name"
+                                <input placeholder="Company name" name="c_name" type="text" ng-model="employee.c_name"
                                        required>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
                             <div class="icon1">
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
-                                <input placeholder="Job title" name="" type="text" ng-model="employee.job"
+                                <input placeholder="Job title" name="job" type="text" ng-model="employee.job"
                                        required>
                             </div>
                         </div>
                         <div class="form-group col-md-12">
                             <div class="icon1">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input placeholder="Location" name="" type="text" ng-model="employee.loc"
+                                <input placeholder="Location" name="loc" type="text" ng-model="employee.loc"
                                        required>
                             </div>
                         </div>
@@ -234,10 +239,12 @@
                             </div>
                         </div>
                         <div class="form-group col-md-12">
-                            <textarea name="" class="col-md-12" rows="3" placeholder="Job Responsibilities"></textarea>
+                            <textarea name="job_res" class="col-md-12" rows="3"
+                                      placeholder="Job Responsibilities"></textarea>
                         </div>
                         <div class="form-group col-md-12">
-                            <textarea name="" class="col-md-12" rows="3" placeholder="Job Achievements"></textarea>
+                            <textarea name="job_ach" class="col-md-12" rows="3"
+                                      placeholder="Job Achievements"></textarea>
                         </div>
 
                         <span class="any">any</span>
@@ -246,7 +253,8 @@
 
                 </div>
                 <div class="modal-footer">
-                    <input type="submit" value="Submit" class="btn btn-primary" ng-click="send(employee)">
+                    <input type="submit" value="Submit" onclick="form_submit()" class="btn btn-primary"
+                           ng-click="send(employee)">
                 </div>
                 <!--<pre>master = {{master | json}}</pre>-->
 
@@ -256,5 +264,9 @@
 </div>
 
 <!-- END # MODAL LOGIN -->
-
+<script type="text/javascript">
+    function form_submit() {
+        document.getElementById("form").submit();
+    }
+</script>
 
