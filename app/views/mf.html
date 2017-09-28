@@ -1,0 +1,46 @@
+<div ng-app="app" class="ng-scope">
+
+    <div><form  action="http://localhost:8080/create/" method="get" target="_blank" enctype="multipart/form-data" name="myForm" class="form-inline">
+    <div><form  action="http://localhost:8080/create/" method="post" target="_blank" enctype="multipart/form-data" name="myForm" class="form-inline">
+
+        <form method="post" ng-controller="form" name="form" class="ng-pristine ng-valid ng-scope ng-valid-email ng-valid-maxlength"><p>
+            Your name*:<br>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" name="name" ng-model="is.name" value=""><br>
+            Your surname*:<br>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" name="surname" ng-model="is.surname" value=""><br>
+            Email*:<br>
+            <input type="email" class="field ng-pristine ng-untouched ng-valid ng-empty ng-valid-email" name="email" ng-model="is.email" value=""><br>
+            Phone number  *: <br>
+            <input type="text" class="field ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" name="phon" ng-model="is.phon" maxlength="25" value="+374"> <br>
+            Personal data *: <br>
+            <textarea name="personal_data" class="field ng-pristine ng-untouched ng-valid ng-empty" ng-model="is.personalData"></textarea><br>
+            Female*: <br>
+            <br>
+            <label>Male</label><input type="radio" name="gender" class="radio ng-pristine ng-untouched ng-valid ng-empty" value="male" ng-model="is.gender">
+            <label>Female</label><input type="radio" name="gender" class="radio ng-pristine ng-untouched ng-valid ng-empty" value="female" ng-model="is.gender">
+            <br>
+
+            Month Day Year  *: <br>
+            <input type="date" class="field ng-pristine ng-untouched ng-valid ng-empty" name="data" ng-model="is.data"><br>
+            Education *: <br>
+            <input type="text" class="field ng-pristine ng-untouched ng-valid ng-empty" name="education" ng-model="is.education"> <br>
+
+            <input class="button" type="submit" name="submit" value="submit" ng-click="value(is)" ng-disabled="form.name.$dirty &amp;&amp; form.name.$invalid">
+
+         </p></form>    </div>
+
+
+
+
+
+<script>
+        var app = angular.module("app", []);
+        app.controller("form", function ($scope) {
+                   $scope.is={};
+                        $scope.value = function(x) {
+                               var person = JSON.stringify(x)
+                               };
+          });
+
+   </script>
+</div>
