@@ -120,7 +120,8 @@ angular
 
                         $ocLazyLoad.load({
                             name:'sbAdminApp',
-                            files:['scripts/controllers/employeesFormCotroller.js']
+                            files:['scripts/controllers/employeesFormCotroller.js',
+                                'scripts/controllers/ajax.js']
                         })
                 }
             }
