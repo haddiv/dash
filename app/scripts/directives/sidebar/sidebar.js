@@ -36,13 +36,12 @@ angular.module('sbAdminApp')
             $scope.multiCollapseVar = y;
         };
       }
-    }
+    };
   }]);
 
 
 
 angular.module('sbAdminApp')
-
     .controller('ExampleController', ['$scope', function ($scope) {
         $scope.user={f_name:"",L_name:"",father_name:"", tel:"",email:"male",pos:"",Skills:"",Address:"",characteristics:"",Salary:"",answer:""};
         $scope.names = ["director", "menejer", "broker"];

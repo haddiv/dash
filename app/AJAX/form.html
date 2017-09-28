@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+</head>
+<body ng-controller="LoginCtrl">
+<form name="loginForm" ng-submit="submitForm(loginForm)">
+    <input type="name" ng-model="user.name">
+    <input type="password" ng-model="user.password">
+
+    <button type="submit">Save</button>
+</form>
+<script src="post.js"></script>
+</body>
+</html>
