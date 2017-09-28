@@ -71,7 +71,7 @@ angular
                             {
                                 name:'ngTouch',
                                 files:['bower_components/angular-touch/angular-touch.js']
-                            })
+                            });
                     }
                 }
             })
@@ -168,17 +168,30 @@ angular
                             name:'sbAdminApp',
                             files:['scripts/controllers/employee.js']
 
-                        })
+                        });
                     }
                 }
             })
 
+
+
             .state('dashboard.registration',{
                 templateUrl:'views/employee/employeeForm.html',
-                url:'/employeeForm.html'
-            })
+                url:'/employeeForm',
+                controller:'employeeController',
+                resolve: {
+                    loadMyFile:function($ocLazyLoad) {
 
 
+                        $ocLazyLoad.load({
+                            name:'sbAdminApp',
+                            files:['scripts/controllers/employee.js',
+                                'scripts/controllers/ajax.js']
+
+                        });
+                    }
+                }
+            });
 
 
 

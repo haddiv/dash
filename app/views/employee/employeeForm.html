@@ -5,7 +5,7 @@
                 <h1 class="modal-title">Information List</h1>
 				
 
-            <form action="http://localhost:1337/create" target="_blank" method="post"  enctype="multipart/form-data">
+            <form action="http://localhost:1337/create" target="_blank" method="post"  enctype="multipart/form-data" id="person">
                 <div class = "row col-md-6">
                     <h3>Personal Information</h3>
                     <div class="form-group col-md-6" >
@@ -168,7 +168,7 @@
 
 
                 <div class="row col-md-6">
-                    <button  type="submit" class="btn btn-primary" ng-click="save()">Save</button>
+                    <button  type="submit" class="btn btn-primary" onclick="save()">Save</button>
                     <button type="" class="btn btn-primary" data-dismiss="modal">Update</button>
                     <button type="" class="btn btn-primary" data-dismiss="modal">Reset</button>
                 </div>
