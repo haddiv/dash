@@ -162,13 +162,23 @@
 </div>
 <script>
         angular.module('formApp'..[]) ;
-        .controller('formCtrl',[function(){
+        .controller('formCtrl',[function add()
 
-            var e=this;
-            e.add=function()  {
-                console.log('submitted',e.user)  ;
-            }  ;
-        }])
+            {
+//alert("Hello World");
+                $.ajax
+                ({
+                    type: "post",
+                    url: "http://localhost:8080",
+                    dataType: "json",
+                    contentType: "employees/json; charset=UTF-8",
+                    data: JSON.stringify(jsonArray}})
+        }).done(function ( data ) {alert("ajax callback response:" + data);
+        }]);
+
+
+
+
 
 
 </script>

@@ -10,9 +10,9 @@ http.createServer(function (req, res) {
     if(q.pathname == "/create"){
         console.log("done!");
         fs.readFile('./employees.json', 'utf8', function (err,data) {
-            if (err) {
-                return console.log(err);
-            }
+            if (err) throw err
+                 console.log(err);
+
             console.log(data);
             if(data==''){
                 var employee = {name:'name',username:'test'};
