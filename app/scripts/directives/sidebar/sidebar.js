@@ -46,8 +46,5 @@ angular.module('sbAdminApp')
         $scope.myFunc = function(user,$http) {
             console.log(user);
 
-            $http.post("localhost:8080/create", user).then(function success (response) {
-                $scope.response = response.data;
-            })};
     }]);
 
