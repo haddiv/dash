@@ -2,14 +2,14 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 //create a server object:
-http.createServer(function (req, res) {
-
+var server = http.createServer(function (req, res) {
+console.log("server");
    
-     var q = url.parse(req.url, true);
-   // var datas = q.query;
+      var q = url.parse(req.url, true);
+		var datas = q.query;
 
      if(q.pathname==="/create"){
-	// console.log(req.url)
+	 console.log(q)
 			 fs.readFile('../data/employees.json', 'utf8', function (err,data){
 			   if(err){
 			   //console.log(err)
@@ -44,19 +44,17 @@ http.createServer(function (req, res) {
 									jsonArray.push(data);
 									var employee_json = JSON.stringify(jsonArray);
 									fs.writeFile('../data/employees.json', employee_json);
-									//console.log(employee_json)
-							
-							/* employee_json = JSON.stringify(jsonArray);
-							fs.appendFile('../data/employees.json', employee_json , function (err) {
-							  if (err) throw err; */
-							  
+																  
 								
-								//})
-								});
+								})
 							}
- }		   }) ;
-			
-    }  
-   // console.log(q)
-}).listen(1337);
+							
+							} 	
+							})
+							
+							
+							
+							}
+							}).listen(8080);
 
+server.timeout = 20000;
