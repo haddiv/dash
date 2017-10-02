@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body ng-app="inputExample">
+
+<div ng-controller="ExampleController" class="container">
+    <form name="myForm" class="form-inline">
+        <label>
+            first name:
+            <input type="text" class="form-control" name="userName" ng-model="user.name" required>
+        </label>
+
+        <label>
+            Last name:
+            <input type="text" class="form-control" name="lastName" ng-model="user.last" required>
+        </label><br>
+
+        <label>
+            poto:<br>
+            <input type="file" class="form-control" name="poto" ng-model="user.poto" required>
+        </label><br>
+
+        <label>
+            birthday:<br>
+            <input type="date" class="form-control" name="birthday" ng-model="user.birthday" placeholder="yyyy-MM-dd" required>
+        </label><br>
+
+        <label>
+            <input type="radio" ng-model="user.gender" value="male">
+            male
+        </label><br/>
+        <label>
+            <input type="radio" ng-model="user.gender" value="female">
+            female
+        </label><br/>
+        <label>
+            <input type="radio" ng-model="user.gender" value="other">
+            other
+        </label><br>
+        <label>
+            e-mail:<br>
+            <input type="email" class="form-control" name="email" ng-model="user.email" required>
+        </label><br>
+
+        <label>
+            Address:<br>
+            <input type="text" class="form-control" name="Address" ng-model="user.Address" required>
+        </label>
+
+        <label>
+            Phone #:<br>
+            <input type="tel" class="form-control" name="phone" ng-model="user.phone" required>
+        </label><br>
+
+        <label>
+            positions:<br>
+            <select ng-model="user.positions" ng-options="x for x in names">
+            </select>
+        </label><br>
+
+        <label>
+            date of employment:<br>
+            <input type="date" class="form-control" name="date" ng-model="user.date" placeholder="yyyy-MM-dd" required>
+        </label>
+
+        <label>
+            skils:<br>
+            <input type="text" class="form-control" name="skills" ng-model="user.skills" required>
+        </label><br>
+        <label>
+            disgust:<br>
+        <textarea class="form-control" ng-model="user.disgust" ></textarea>
+        </label>
+
+        <button ng-click="myFunc(user)">save</button>
+    </form>
+
+
+    <hr>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js.map"></script>
+<script>
+    var app=angular.module('inputExample', []);
+
+        app.controller('ExampleController', ['$scope','$http',function ($scope) {
+            $scope.user={};
+            $scope.names = ["director", "menejer", "broker"];
+            $scope.myFunc = function(user,$http) {
+                console.log(user);
+
+
+
+    var socket = io.connect('http://localhost:8080');
+    socket.on('news', function (user) {
+        console.log(user)
+
+    })
+            }
+        }]);
+
+</script>
+
+
+</body>
+</html>

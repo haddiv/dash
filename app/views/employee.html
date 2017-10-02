@@ -1,6 +1,6 @@
 
 <div ng-controller="ExampleController" class="container">
-    <form action="http://localhost:8080/create/" method="Get" target="_blank" enctype="multipart/form-data" name="myForm" class="form-inline">
+    <form id="person" action="http://localhost:8080/create/" method="Get" target="_blank" enctype="multipart/form-data" name="myForm" class="form-inline">
         <label>
             first name:
             <input type="text" class="form-control" name="userName" ng-model="user.name">
@@ -68,7 +68,7 @@
             <textarea class="form-control" ng-model="user.disgust" ></textarea>
         </label>
 
-        <input type="submit" value="submit" ng-click="myFunc(user)"></input>
+        <input type="button" value="button" ng-click="myFunc(user)"></input>
     </form>
 
 

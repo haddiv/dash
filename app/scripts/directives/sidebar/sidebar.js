@@ -41,11 +41,24 @@ angular.module('sbAdminApp')
 
 angular.module('sbAdminApp')
 
-.controller('ExampleController', ['$scope', function ($scope) {
-    $scope.user={name:"",Last_name:"",poto:"", birthday:"",gender:"male",email:"",Address:"",phone:"",positions:"",date:"",skils:"",disgust:""};
+.controller('ExampleController', ['$scope','$http', function ($scope, $http) {
+    $scope.user={name:"",Last_name:"",poto:"", birthday:"",gender:"male",email:"",Address:"",phone:"",positions:"",date:"",skils:"",disgust:"",id:""};
     $scope.names = ["director", "menejer", "broker"];
-    $scope.myFunc = function(user) {
+    $scope.myFunc = function(user,$http) {
         console.log(user);
 
+        //
+        //    // var formData = new FormData(document.forms.person);
+        // var formData =user;
+        //     var xhttp = new XMLHttpRequest();
+        //     //var url = 'server.js';
+        //     xhttp.open("POST", "http://localhost:8080/create", true);
+        //     //xhttp.send(employeesForm.html);
+        //     //  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //     console.log(formData);
+        // }
 
-    }}]);
+        $http.post("localhost:8080/create", user).then(function success (response) {
+            $scope.response = response.data;
+        })}
+    }]);
